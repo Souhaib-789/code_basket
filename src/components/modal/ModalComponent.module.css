@@ -1,0 +1,41 @@
+.modalCont{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    /* width: 300px; */
+}
+.imageBox{
+    width: 100px;
+    height: 100px;
+    color: var(--secondary-color);
+}
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.heading{
+    font-family: "Urbanist-bold";
+    font-size: var(--heading1-font-size);
+    /* width: 60%; */
+    text-align: center;
+    margin: 10px 0;
+    line-height: normal;
+    /* background-color: aqua; */
+}
+.btn{
+    width: 90%;
+}
+.btnDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.secondaryBtn{
+    margin-top: 10px;
+    width: 90%;
+
+}

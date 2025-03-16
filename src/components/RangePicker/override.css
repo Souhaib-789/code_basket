@@ -1,0 +1,10 @@
+.MuiDateRangeCalendar-root > div:first-child{
+display: none !important;
+}
+
+.MuiDateRangeCalendar-root{
+    width: 200px;
+}
+.ant-popover-inner{
+    padding: 0px !important;
+}

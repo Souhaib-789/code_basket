@@ -1,0 +1,308 @@
+.detail_page_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 80vh;
+  padding: 20px 35px;
+  border-radius: 10px;
+  background-color: var(--white-color);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  animation: fadeIn 0.5s ease-in-out;
+
+}
+
+.avatar{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.skeleton_container{
+  gap: 15px !important;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.pro_row {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.wide_row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.backIcon {
+  font-size: 25px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-top: 20px;
+  background-color: var(--white-color);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+/* Title styling */
+.snippet_title {
+  font-size: 30px;
+  font-family: var(--font-family);
+  font-weight: bold;
+}
+
+/* Metadata tags (language & framework) */
+.snippet_meta {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.snippet_tag {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-family: var(--font-family);
+
+}
+
+/* Description styling */
+.snippet_description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #555;
+  font-family: var(--font-family);
+
+}
+
+/* Usage section */
+.usage_section {
+  border-top: 1px solid #dee2e6;
+  padding-top: 20px;
+}
+
+.usage_title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-family: var(--font-family);
+
+}
+
+.text{
+ font-weight: 700;
+}
+
+.span{
+  font-size: 12px;
+  color: var(--light-text);
+  font-family: var(--font-family);
+}
+
+.usage_description {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.5;
+  font-family: var(--font-family);
+
+}
+
+.back_button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  color: #007bff;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  z-index: 10;
+}
+
+.back_button:hover {
+  color: #0056b3;
+}
+
+.skeleton_heading {
+  display: block;
+  width: 30% !important;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 10
+}
+
+.user_info_view{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 10px;
+  margin: 10px 0px;
+}
+
+.skeleton_span{
+  display: block;
+  width: 25% !important;
+  height: 30px;
+  margin-top: 20;
+  border-radius: 10
+}
+
+.skeleton_text{
+  display: block;
+  width: 90% !important;
+  height: 15px;
+  margin-top: 20;
+  border-radius: 10
+}
+
+.skeleton_box{
+  display: block;
+  width: 100% !important;
+  height: 300px;
+  margin-top: 20;
+  border-radius: 10
+}
+
+/* Code block styling */
+.usage_code {
+  /* background-color: #f1f1f1; */
+  padding: 15px;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.95rem;
+  color: #fff;
+  white-space: pre-wrap;
+}
+
+.code_block {
+  position: relative;
+  background-color: #000;
+  /* Black background for code area */
+  color: #fff;
+  /* White text for better contrast */
+  padding: 20px;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-family: 'Source Code Pro', monospace;
+  /* Or any monospace font */
+  font-size: 0.95rem;
+  margin-top: 20px;
+}
+
+/* Copy Button positioned at the top right */
+.copy_button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  font-family: var(--font-family);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.copy_button:hover {
+  background-color: #666;
+}
+
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  /* Wrap code lines if needed */
+}
+
+@media (max-width: 768px) {
+  .detail_page_container {
+    padding: 20px;
+  }
+
+  .backIcon {
+    margin-top: 10px;
+  }
+
+  .snippet_title {
+    font-size: 25px;
+  }
+
+  .snippet_tag {
+    font-size: 0.8rem;
+  }
+
+  .snippet_description {
+    font-size: 1rem;
+  }
+
+  .usage_title {
+    font-size: 1.3rem;
+  }
+
+  .usage_description {
+    font-size: 0.9rem;
+  }
+
+  .usage_code {
+    font-size: 0.9rem;
+  }
+
+  .code_block {
+    font-size: 0.9rem;
+  }
+  .skeleton_heading {
+    display: block;
+    width: 90% !important;
+  }
+  
+  .skeleton_span{
+    display: block;
+    width: 75% !important;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .avatar{
+    width: 25px;
+    height: 25px;
+  }
+}
+
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

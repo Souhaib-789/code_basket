@@ -1,0 +1,1 @@
+export const IMAGINE_ART_API = 'https://api.vyro.ai/v2/image/generations';

@@ -1,0 +1,37 @@
+.mainCont{
+    background-color: var(--white-color);
+    padding: 15px;
+    border-radius: 15px;
+}
+.listItem{
+    margin-top: 15px;
+    /* background-color: var(--light-blue); */
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.nonActivenotiDot{
+    color: var(--secondary-color);
+    margin-right: 10px;
+    font-size: var(--heading-font-size);
+
+}
+.notiDot{
+    margin-right: 10px;
+    color: var(--primary-color);
+    font-size: var(--heading-font-size);
+
+}
+.messageBox{
+    display: flex;
+    flex-direction: column;
+}
+.notiMess{
+    color: var(--black-color);
+    font-size: var(--dashboard_tabs-font-size);
+}
+.notiTime{
+    font-size: var(--mobile-sub-heading);
+}

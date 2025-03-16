@@ -1,0 +1,26 @@
+.container {
+  /* width: 200px; */
+}
+.rangePicker {
+  cursor: pointer;
+  /* width: 200px; */
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.applyBtn {
+  border-radius: 40px;
+  background-color: var(--secondary-color);
+  width: 150px;
+}
+.clearBtn {
+  border-radius: 40px;
+  width: 150px;
+}
+.rangePickerText {
+  font-weight: bold;
+}

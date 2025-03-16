@@ -1,0 +1,18 @@
+.publiclayoutContainer{
+    /* background-image: url('../assets/backImg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; */
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.contentBox{
+    padding: 20px 20px;
+    border-radius: 15px;
+    max-height: 85vh;
+    overflow: scroll;
+}

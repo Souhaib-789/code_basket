@@ -1,0 +1,98 @@
+
+
+.main_input {
+  margin: 10px 0px;
+  width: 100%;
+
+}
+.label {
+  color: var(--black-color);
+  font-size: var(--paragraph-font-size);
+  /* font-family: "Urbanist-medium"; */
+  /* font-family: var(--font-family); */
+  font-weight: 600;  
+}
+.input {
+  /* width: 100%; */
+  border: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  margin-top: 8px;
+  /* font-family: var(--font-family); */
+  padding: 0 8px;
+  
+}
+.inner_input {
+  height: 35px;
+  width: 90%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: var(--black-color);
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family);
+  
+} 
+.inner_input::placeholder{
+  color: var(--light-grey);
+  /* font-weight: ; */
+  font-family: var(--font-family);
+}
+.inner_textArea {
+  width: 95%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: var(--black-color);
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family);
+ resize: none;
+  
+} 
+.inner_textArea::placeholder{
+  color: var(--light-grey);
+  /* font-weight: ; */
+  font-family: var(--font-family);
+}
+.rightIcon{
+  cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+@media only screen and (max-width: 992px) {
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 576px) {
+  .label {
+    font-size: 10px;
+  }
+
+  .input {
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 5px; */
+  }
+
+  /* .main_input {
+    margin: 10px 0px 20px 0px;
+  } */
+
+  .inner_input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    /* color: #fff; */
+  }
+}

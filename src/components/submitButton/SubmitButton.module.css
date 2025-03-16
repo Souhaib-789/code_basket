@@ -1,0 +1,102 @@
+.btn{
+  width: 100%;
+  background-color: var(--secondary-color);
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+  height: 40px;
+  cursor: pointer;
+  color: #fff;
+  opacity: 1;
+  transition: opacity 300ms ease;
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.secondaryBtn{
+  width: 100%;
+  background-color: var(--light-blue);
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+  height: 40px;
+  cursor: pointer;
+  color: var(--primary-color);
+  opacity: 1;
+  transition: opacity 300ms ease;
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.touchbtn{
+  width: 100%;
+  background-color: var(--secondary-color);
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+  height: 40px;
+  cursor: pointer;
+  color: #fff;
+  opacity: 0.5;
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.secontouchbtn{
+  width: 100%;
+  background-color: var(--light-blue);
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+  height: 40px;
+  cursor: pointer;
+  color: #fff;
+  opacity: 0.5;
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+ .btnText{
+  font-size: 16px;
+  color: var(--white-color);
+  font-family: var(--font-family);
+  /* font-weight: 600; */
+}
+.seconbtnText{
+  font-size: 16px;
+  color: var(--secondary-color);
+  font-family: var(--font-family);
+
+}
+/*
+.btnTextOutline{
+  color: var(--btn-color);
+  font-weight: bold;
+} */
+/* .btnText{
+  font-size: var(--paragraph-font-size);
+} */
+
+
+@media only screen and (max-width: 992px) {
+  .btn {
+    width: 100%;
+    margin-top: 5%;
+  }
+  .btnText{
+    font-size: 12px;
+  }
+  .seconbtnText{
+    font-size: 14px;
+  }
+}

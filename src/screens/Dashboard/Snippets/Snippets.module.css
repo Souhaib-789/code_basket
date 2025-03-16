@@ -1,0 +1,145 @@
+.mainCont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 25px;
+    border-radius: 10px;
+    background-color: var(--white-color);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+
+.heading {
+    display: block;
+    font-size: 25px;
+    font-family: var(--font-family);
+    font-weight: bold;
+}
+
+
+
+
+.wide_row {
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 0px;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    /* margin: 20px 0px; */
+    align-items: center;
+}
+
+.avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+
+.card_mini_view {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+    flex: 1
+}
+
+.prodName {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+    width: 47%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.card_image {
+    width: 40%;
+    object-fit: cover;
+}
+
+.span {
+    font-size: 12px;
+    color: var(--light-grey);
+}
+
+.text {
+    font-size: 14px;
+    color: var(--black-color);
+}
+
+
+
+.card_sub_view {
+    display: flex;
+    gap: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+    .mainCont {
+        flex-direction: column;
+
+    }
+
+    .card_sub_view {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .card {
+        width: 90%;
+        padding: 8px;
+    }
+
+    .card_image {
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .prodName {
+        font-size: 14px;
+    }
+
+    .card_mini_view {
+    
+        margin: 0px 5px;
+        flex: 1
+    }
+
+    .span {
+        font-size: 10px;
+    }
+
+    .text {
+        font-size: 11px;
+    }
+    
+
+}
+
+@media only screen and (max-width: 540px) {
+   
+}

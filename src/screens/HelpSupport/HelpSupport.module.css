@@ -1,0 +1,235 @@
+.mainCont{
+    margin-bottom: 50px;
+}
+.contactUs{
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.supportDiv{
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    position: relative;
+    
+}
+.liveChatDiv{
+    background-color: var(--white-color);
+    border-radius: 15px;
+    width: 250px;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+.chatIcon{
+    position: absolute;
+    color: var(--secondary-color);
+    font-size: 30px;
+    right: 10px;
+    top: 10px;
+}
+.liveChat_upper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+.liveChat_upper img{
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--border-color);
+    margin-right: 10px;
+    border-radius: 100px;
+}
+.liveChatBtn{
+    margin-top: 10px;
+}
+/* .chatDiv{
+    background-color: var(--white-color);
+    border-radius: 10px;
+    width: 500px;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 0;
+    transition: height 0.3s ease-in-out; 
+}
+
+
+  
+  .chatDiv.open {
+    height: 200px;
+  }
+  
+  .chatDiv.closed {
+    height: 0; 
+  } */
+  .chatDiv {
+    overflow: hidden; /* Ensures content is hidden during the transition */
+    background-color: var(--white-color);
+    border-radius: 10px;
+    width: 500px;
+    padding: 15px 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: 420px;
+    margin: 10px 0;
+    overflow-y: scroll;
+
+  }
+  .chat_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+  }
+  .chat_headerLeft{
+    width: 90%;
+  }
+  .chat_headerLeft img{
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    border:  1px solid var(--border-color);
+    margin-right: 5px;
+  }
+  .chat_liveChat{
+    background-color: #FFE3E4;
+    padding: 5px;
+    color: var(--primary-color);
+    border-radius: 5px;
+    margin-left: 5px;
+    font-size: var(--mobile-sub-heading);
+  }
+  .chat_headerRight{
+    width: 10%;
+    display: flex;
+    justify-content: right;
+    cursor: pointer;
+  }
+  .typeBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    /* position: absolute; */
+    /* bottom: 10px; */
+    align-self: center;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--white-color);
+    margin-top: 10px;
+  }
+  .typeBox_left {
+    width: 8%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .typeBox_middle{
+    width: 80%;
+  }
+  .typeBox_right{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+  }
+  .typeBox_middle input{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: var(--black-color);
+    display: flex;
+    align-items: center;
+    font-family: "Urbanist-regular";
+    width: 100%;
+  }
+  .typeBox_middle input::placeholder{
+    color: var(--light-grey);
+    /* font-weight: ; */
+    font-family: "Urbanist-regular";
+  }
+  .listItem1{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+
+  }
+  .listItem1 img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    object-fit: cover;
+    margin-right: 5px;
+    border: 1px solid var(--border-color);
+  }
+  .listMessage1{
+    font-family: "urbanist-semibold";
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: 10px;
+    width: 60%;
+  }
+  .listItem2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    justify-content: right;
+
+  }
+  .listItem2 img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    object-fit: cover;
+    margin-left: 5px;
+    border: 1px solid var(--border-color);
+
+
+  }
+  .listMessage2{
+    font-family: "urbanist-semibold";
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--light-blue);
+    width: 60%;
+  }
+  @media only screen and (max-width: 500px){
+    .chatDiv {
+        width: 100%;
+    
+      }
+      .listMessage1{
+        width: 80%;
+      }
+      .listMessage2{
+        width: 80%;
+      }
+  }

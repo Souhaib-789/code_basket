@@ -1,0 +1,230 @@
+.mainRow {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabText {
+  color: var(--light-text);
+  /* font-weight: bold;
+  font-size: 18px; */
+  text-wrap: nowrap;
+  display: block;
+  /* width: 150px; */
+}
+
+.activeTabBar {
+  border-radius: 100px;
+  height: 5px;
+  width: 70%;
+  background-color: var(--primary-color);
+}
+
+.tabCol {
+  padding: 5px 15px;
+  cursor: pointer;
+  border: 1px solid var(--light-text);
+  margin: 0px 10px;
+  border-radius: 8px;
+}
+.tabsMainCont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ background-color: var(--white-color);
+  /* box-shadow: 0px 8px 0px 5px var(--border-color); */
+  /* box-shadow: 0px 0px 8px var(--border-color); */
+  border-radius: 10px;
+  padding: 15px 15px;
+  /* margin-bottom: 0px; */
+}
+.rightDiv {
+  width: 50%;
+}
+
+.activeTab {
+  color: var(--secondary-color);
+  border:2px solid var(--secondary-color);
+
+}
+
+.activeTab text{
+  color: var(--secondary-color);
+  font-weight: bold;
+
+}
+
+.tabRow {
+  justify-content: center;
+  align-items: center;
+}
+
+.gapClass {
+  gap: 4%;
+}
+
+.tabsCont {
+  /* margin-top: 15px; */
+  display: flex;
+  width: 47%;
+  align-items: center;
+}
+
+.boxButton {
+  width: clamp(230px, 20%, 320px);
+  min-width: 200px;
+  padding: 10px;
+  border-radius: 0 0 20px 20px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0px 0px 10px 5px var(--shadow-color);
+  /* box-shadow: none; */
+  white-space: nowrap;
+}
+
+.active {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.inActive {
+  background-color: var(--white-color);
+  color: var(--secondary-color);
+}
+
+.boxTab {
+  margin-top: 0px;
+  width: 100%;
+  margin-bottom: 10px;
+  /* justify-content: space-between; */
+  flex-wrap: nowrap;
+}
+
+.btnClass {
+  width: 20%;
+}
+
+.centered {
+  justify-content: center;
+}
+
+.dots {
+  background-color: black;
+  color: black;
+}
+
+.scrollBtnOverlay {
+  width: 40px;
+  height: 60px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.8)
+  );
+  position: absolute;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.scrollBtn {
+  background-color: var(--primary-color);
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  font-size: 1.7rem;
+  border-radius: 50%;
+  cursor: pointer;
+  scroll-behavior: smooth;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 10px;
+}
+
+.rightScroll {
+  right: 0px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.leftScroll {
+  left: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.boxTabs {
+  position: relative;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .tabsCont {
+    width: 70%;
+  }
+  .rightDiv {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 820px) {
+  .tabsCont {
+    overflow-x: scroll;
+    width: 100%;
+    flex-flow: unset;
+    margin-top: 10px;
+  }
+  .gapClass {
+    gap: 0%;
+  }
+  .rightDiv {
+    width: 100%;
+  }
+  .tabsMainCont{
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .tabText {
+    font-size: 12px;
+  }
+
+  .tabsCont {
+    overflow-x: scroll;
+    width: 100%;
+    flex-flow: unset;
+    gap: 8px;
+  }
+
+  .tabRow {
+    flex-direction: column;
+  }
+
+  .activeTabBar {
+    width: 20%;
+  }
+
+  .boxButton {
+    width: 100%;
+    padding: 5px;
+    font-size: 12px;
+    min-width: 100px;
+  }
+  .tabCol {
+    padding: 5px 10px;
+  }
+  .btnClass {
+    width: 100%;
+  }
+  .tabsClass {
+    width: 100%;
+  }
+}

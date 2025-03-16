@@ -1,0 +1,129 @@
+
+
+.main_input {
+  /* margin: 10px 0px; */
+  width: 100%;
+
+}
+.label {
+  color: var(--black-color);
+  font-size: var(--paragraph-font-size);
+  /* font-family: "Urbanist-medium"; */
+  font-family: var(--font-family);
+  font-weight: 600;  
+}
+.input {
+  border: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  margin-top: 10px;
+  /* font-family: var(--font-family); */
+  /* padding: 0 10px; */
+  padding-right: 10px;
+  padding-left: 2px;
+  width: 100%;
+  background-color: var(--white-color);
+  
+}
+.inner_input {
+  height: 35px;
+  width: 80%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: var(--black-color);
+  display: flex;
+  align-items: center;
+  font-family: "Urbanist-regular";
+  
+} 
+.dropdownStyle{
+  font-family: "Urbanist-regular";
+}
+
+.dropdown_row{
+  display: flex;
+  flex-direction: column;
+  height: 32px;
+
+}
+.inner_input::placeholder{
+  color: var(--light-grey);
+  /* font-weight: 800 ; */
+  font-size: 14px;
+  font-family: "Urbanist-regular";
+}
+.rightIconUp {
+  cursor: pointer;
+  color: var(--border2-color);
+  font-size: 18px;
+  transform: rotate(180deg);
+  transition: transform 0.5s ease;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.rightIconDown {
+  /* width: 15%; */
+  cursor: pointer;
+  color: var(--border2-color);
+  font-size: 18px;
+  transition: transform 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 30px; */
+
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.option {
+  color: #838383;
+  transition: color 0.3s;
+}
+
+.dropdownOpen .selectedOption {
+  font-weight: bold;
+}
+
+.dropdownOpen .unselectedOption {
+  color: #838383;
+}
+@media only screen and (max-width: 992px) {
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 576px) {
+  .label {
+    font-size: 10px;
+  }
+
+  .input {
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 5px; */
+  }
+
+  /* .main_input {
+    margin: 10px 0px 20px 0px;
+  } */
+
+  .inner_input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    /* color: #fff; */
+  }
+}

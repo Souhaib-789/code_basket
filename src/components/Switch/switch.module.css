@@ -1,0 +1,99 @@
+/* Basic container for the switch */
+.switchContainer {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+  }
+  
+  /* Label for the switch */
+  .switchLabel {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  /* The switch itself */
+  .switch {
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+  }
+  
+  /* Disabled state for the switch */
+  .switchDisabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  /* Size variations */
+  .switchSmall {
+    width: 40px;
+    height: 20px;
+  }
+  
+  .switchMedium {
+    width: 60px;
+    height: 30px;
+  }
+  
+  .switchLarge {
+    width: 80px;
+    height: 40px;
+  }
+  
+  /* Active state when the switch is "On" */
+  .switchOn {
+    background-color: var(--primary-color);
+  }
+  
+  /* Inactive state when the switch is "Off" */
+  .switchOff {
+    background-color: var(--green-color);
+  }
+  
+  /* The knob inside the switch */
+  .switchKnob {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    transition: left 0.3s;
+  }
+  
+  /* Size variations for the knob */
+  .switchSmall .switchKnob {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .switchMedium .switchKnob {
+    width: 23px;
+    height: 23px;
+  }
+  
+  .switchLarge .switchKnob {
+    width: 33px;
+    height: 33px;
+  }
+  
+  /* When the switch is "On", move the knob to the right */
+  .knobOn {
+    left: calc(100% - 26px); /* For medium size, adjust the knob position */
+  }
+  
+  .switchSmall .knobOn {
+    left: calc(100% - 17px); /* For small size */
+  }
+  
+  .switchLarge .knobOn {
+    left: calc(100% - 36px); /* For large size */
+  }
+  
+  /* When the switch is "Off", keep the knob to the left */
+  .knobOff {
+    left: 3px;
+  }
+  

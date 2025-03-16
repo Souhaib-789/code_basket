@@ -1,0 +1,40 @@
+.mainCont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.searchIcon{
+    font-size: 20px;
+    margin-right: 10px;
+}
+.input {
+  width: 100%;
+  /* border: 1px solid var(--border-color); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--input-bg);    
+  padding: 0 10px;
+}
+.inner_input {
+  height: 40px;
+  width: 90%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: var(--black-color);
+  display: flex;
+  align-items: center;
+  font-family: "Urbanist-regular";
+  background-color: var(--input-bg);
+
+}
+.inner_input::placeholder {
+  color: var(--light-grey);
+  /* font-weight: ; */
+  font-family: "Urbanist-regular";
+}
+.rightIcon {
+  cursor: pointer;
+}

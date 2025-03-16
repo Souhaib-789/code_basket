@@ -1,0 +1,78 @@
+.mainCont {
+  display: flex;
+  background-color: var(--white-color);
+  width: 100%;
+}
+.leftCont {
+  width: 40%;
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--light-grey) 0px 0px 30px -10px inset,
+    var(--light-grey) 0px 0px 0px -0px inset;
+}
+.rightCont {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px 0px;
+  background-color: var(--white-color);
+}
+.subRightCont{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightWidthCont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+  .logoImg {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+  }
+
+  .clockImg{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  .heading{
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Urbanist-bold";
+    font-size: var(--heading2-font-size);
+  }
+  .text{
+    margin-top: 10px;
+    font-family: "Urbanist-regular";
+    font-size: var(--paragraph-font-size);
+    text-align: center;
+    padding: 0 15px;
+  }
+  
+  @media only screen and (max-width: 992px) {
+    .mainCont {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .leftCont {
+      width: 100%;
+      background-color: white;
+      height: 35vh;
+    }
+    .rightCont {
+      width: 100%;
+      background-color: white;
+      height: 65vh;
+    }
+  }
+  
