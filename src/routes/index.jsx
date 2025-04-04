@@ -1,5 +1,5 @@
 import { Result } from "antd";
-import { createBrowserRouter,  createRoutesFromElements,  Route} from "react-router-dom";
+import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
 import Login from "../screens/Auth/Login/Login";
 import Signup from "../screens/Auth/SignUp/Signup";
 import { ProtectedLayout } from "./ProtectedRoutes";
@@ -15,7 +15,8 @@ export const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route element={<HomeLayout />}>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Route>
 
@@ -28,7 +29,7 @@ export const router = createBrowserRouter(
         <Route path="/feedback" element={<Feedback />} />
 
       </Route>
-      
+
 
       <Route path="*" element={
         <Result

@@ -167,37 +167,6 @@ export const SnippetsMiddleware = {
     },
 
     
-    // getDeveloperSnippets: params => {
-    //     return dispatch => {
-    //         return new Promise(async (resolve, reject) => {
-    //             try {
-
-    //                 const { data, error } = await supabase
-    //                     .from('snippets')
-    //                     .select('*')
-    //                     .eq('user_id', params?.id)
-
-
-    //                 if (error) {
-    //                     dispatch(showAlert({ title: 'get Developer Snippets', message: error?.message ? error?.message : 'Something went wrong!', type: 'Error' }));
-    //                     reject(error)
-    //                 }
-    //                 else {
-    //                     resolve(true)
-    //                     if (data) {
-    //                         dispatch(getMySnippets(data))
-    //                     }
-    //                 }
-
-    //             } catch (error) {
-    //                 reject(error);
-    //                 dispatch(showAlert({ title: 'get Developer Snippets', message: error?.message ? error?.message : 'Something went wrong!', type: 'Error' }));
-
-    //             }
-    //         });
-    //     };
-    // },
-
     deleteCodeSnippet: params => {
         return dispatch => {
             return new Promise(async (resolve, reject) => {
