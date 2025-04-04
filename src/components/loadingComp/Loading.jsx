@@ -1,18 +1,22 @@
 import React from "react";
-import { Alert, Spin } from 'antd';
 import { useSelector } from "react-redux";
 import TextComponent from "../textComponent/TextComponent";
-import { LoadingOutlined } from "@ant-design/icons";
+import Lottie from "lottie-react";
+import LOADER from '../../assets/animations/loader.json'
 
 const Loading = () => {
   const loading = useSelector((state) => state.GeneralReducer.loading);
-  const antIcon = <LoadingOutlined color="white"/>
   return loading ? (
     <div className="loadingClass">
-      <Spin indicator={antIcon} />
-      <TextComponent text='Loading ...' style={{color:'var(--white-color)',fontSize:'20px',fontWeight:'bold',marginTop:15 }}/>
+      <div className="loadingInnerClass">
+        <Lottie animationData={LOADER} loop={true} style={{ width: '70%', height: '70%' }} />
+        <TextComponent text='Loading ... Please wait !' style={{ color: 'var(--light-text)', fontSize: '20px', fontWeight: 'bold' }} />
+      </div>
     </div>
+
   ) : (
+
+
     <></>
   );
 };

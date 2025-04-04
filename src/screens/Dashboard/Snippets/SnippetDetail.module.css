@@ -191,15 +191,13 @@
 }
 
 .code_block {
-  position: relative;
-  background-color: #000;
-  /* Black background for code area */
+   position: relative;
+  /* background-color: #000;  */
   color: #fff;
-  /* White text for better contrast */
-  padding: 20px;
-  border-radius: 4px;
-  overflow-x: auto;
-  font-family: 'Source Code Pro', monospace;
+  /* padding: 20px; */
+  /* border-radius: 4px; */
+  /* overflow-x: auto; */
+  /* font-family: 'Source Code Pro', monospace; */
   /* Or any monospace font */
   font-size: 0.95rem;
   margin-top: 20px;

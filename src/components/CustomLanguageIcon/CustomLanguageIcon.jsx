@@ -1,5 +1,6 @@
 import React from "react";
 import { BiLogoTypescript } from "react-icons/bi";
+import { BsFileEarmarkCodeFill } from "react-icons/bs";
 import { DiRuby } from "react-icons/di";
 import { FaAngular, FaCss3Alt, FaFileCode, FaHtml5, FaJava, FaJs, FaNodeJs, FaPython, FaReact } from 'react-icons/fa';
 import { FaC } from "react-icons/fa6";
@@ -57,7 +58,7 @@ export const CustomLanguageIcon = ({ language }) => {
 
 
         default:
-            return <FaFileCode size={size} color={color}/>
+            return <BsFileEarmarkCodeFill size={size} color={color}/>
 
     }
 };

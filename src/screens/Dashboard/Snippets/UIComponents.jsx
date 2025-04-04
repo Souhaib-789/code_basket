@@ -14,7 +14,7 @@ const UIComponents = (props) => {
             {
                 loading ?
                     [1, 2, 3, 4]?.map((item, index) => 
-                        <Skeleton.Button active={true} style={{width: 510, height: 170, marginTop: 20, borderRadius: 10 }}  /> 
+                        <Skeleton.Button active={true} className={styles.skeleton}  /> 
                           )
                     :
                     (

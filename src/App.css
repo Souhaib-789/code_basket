@@ -12,6 +12,18 @@
   flex-direction: column;
 }
 
+.loadingInnerClass{
+
+  background-color: white;
+  padding: 20px 0px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
 .ant-popover-inner {
     margin: 0;
     /* background-color: var(--black-color) !important; */

@@ -12,24 +12,7 @@ const hideAlert = () => {
     type: ActionTypes.HIDE_ALERT,
   };
 };
-const showRinging = (payload) => {
-  return {
-    type: ActionTypes.SHOW_RINGING,
-    payload,
-  };
-};
 
-const hideRinging = () => {
-  return {
-    type: ActionTypes.HIDE_RINGING,
-  };
-};
-const declineRinging = (payload) => {
-  return {
-    type: ActionTypes.DECLINE_RINGING,
-    payload,
-  };
-};
 
 const showLoading = () => {
   return {
@@ -43,26 +26,19 @@ const hideLoading = () => {
   };
 };
 
-const UpdateTheme = (payload) => {
+const showUploadingLoading = () => {
   return {
-    type: ActionTypes.UPDATE_THEME,
-    payload,
+    type: ActionTypes.SHOW_UPLOADING_LOADING,
   };
 };
 
-const getTypes = (payload) => {
+const hideUploadingLoading = () => {
   return {
-    type: ActionTypes.GENERAL_TYPES,
-    payload,
+    type: ActionTypes.HIDE_UPLOADING_LOADING,
   };
 };
 
-const UpdateTypes = (payload) => {
-  return {
-    type: ActionTypes.UPDATE_TYPES,
-    payload,
-  };
-};
+
 const sessionExpired = (payload) => {
   return {
     type: ActionTypes.SESSION_EXPIRED,
@@ -79,12 +55,8 @@ export {
   hideLoading,
   showAlert,
   hideAlert,
-  UpdateTheme,
-  getTypes,
-  UpdateTypes,
-  showRinging,
-  hideRinging,
-  declineRinging,
+  showUploadingLoading,
+  hideUploadingLoading,
   sessionExpired,
   priceFormat,
 };

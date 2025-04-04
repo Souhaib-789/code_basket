@@ -59,7 +59,7 @@ body {
     monospace;
 } */
 :root {
-  --primary-color: #1E3348;
+  --primary-color: #1e293b;
   --secondary-color: #5a4fcf;
   --light-secondary: rgba(90,79,207 , 0.09 );
   --light-blue: #E5EDF6;

@@ -1,150 +1,173 @@
-.heading {
-    display: block;
-    font-size: 25px;
-    font-family: var(--font-family);
-    font-weight: bold;
+.card {
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 6px;
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    transition: all 0.2s ease-in-out;
 }
 
-
-
-
-.wide_row {
+.heading_row{
     display: flex;
     justify-content: space-between;
-    /* margin: 3px 0px; */
     align-items: center;
 }
 
-.row {
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 8px;
+}
+
+.card_sub_view {
     display: flex;
-    gap: 10px;
-    /* margin: 20px 0px; */
-    align-items: center;
+    gap: 12px;
+    align-items: flex-start;
 }
 
-.avatar {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+.card_image {
+    width: 85px;
+    height: 85px;
     object-fit: cover;
+    border-radius: 8px;
 }
-
-
-
 
 .card_mini_view {
     display: flex;
     flex-direction: column;
-    margin: 0px 10px;
     flex: 1;
-    /* gap:3px */
 }
 
 .prodName {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 600;
+    color: var(--black-color);
+    margin-bottom: 4px;
 }
 
-
-
-.card {
+.row {
     display: flex;
-    flex-direction: column;
-    margin: 10px 10px;
-    width: 47%;
-    padding: 20px;
-    border-radius: 10px;
+    align-items: center;
     gap: 10px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-.card_image {
-    width: 20%;
-    height: 90px;
-    /* background-color: antiquewhite; */
-    object-fit: contain;
-}
-
-.span {
+.language_text {
     font-size: 12px;
     color: var(--light-grey);
 }
 
+.colored_icon {
+    background-color: var(--light-secondary);
+    padding: 6px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+}
+
+.span{
+    color: var(--light-grey);
+    font-size: 12px;
+}
+
+.delete_icon {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.statusCont {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.avatar {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.text {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--black-color);
+}
 
 .desc {
-    width: 80%;
-    font-size: 12px;
+    font-size: 13px;
     color: var(--light-grey);
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: 18px;
 }
 
-.text {
-    font-size: 14px;
-    color: var(--black-color);
-}
-
-.colored_icon{
-    background-color: var(--light-secondary);
-    padding: 10%;
-    border-radius: 5px;
+.wide_row {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
 }
 
+.wide_row div {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
 
-
-.card_sub_view {
-    display: flex;
-    gap: 5px;
+.wide_row div:hover {
+    transform: scale(1.1);
 }
 
 @media only screen and (max-width: 768px) {
-    .mainCont {
-        flex-direction: column;
-
+    .card {
+        padding: 14px;
     }
 
     .card_sub_view {
-        display: flex;
         flex-direction: column;
-        gap: 8px;
+        align-items: center;
+        text-align: center;
+        gap:  15px;
     }
 
-    .card {
-        width: 90%;
-        padding: 8px;
+    .card_mini_view{
+        gap: 10px
     }
 
     .card_image {
-        width: 100%;
-        height: 100px;
-        object-fit: cover;
-    }
-
-    .prodName {
-        font-size: 14px;
-    }
-
-    .card_mini_view {
-
-        margin: 0px 5px;
-        flex: 1
-    }
-
-    .span {
-        font-size: 10px;
-    }
-
-    .text {
-        font-size: 11px;
+        width: 80px;
+        height: 80px;
     }
 
 
+
+    .avatar {
+        width: 22px;
+        height: 22px;
+    }
+
+    .desc {
+        font-size: 12px;
+    }
+
+    .wide_row {
+        align-items: center;
+        gap: 6px;
+    }
+
+    .heading_row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .language_text{
+        display: none;
+    }
 }
-
-@media only screen and (max-width: 540px) {}

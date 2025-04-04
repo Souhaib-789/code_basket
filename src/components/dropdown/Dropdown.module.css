@@ -119,6 +119,10 @@ input::-webkit-inner-spin-button {
     margin: 10px 0px 20px 0px;
   } */
 
+  .dropdown_text{
+    font-size: 10px;
+  }
+
   .inner_input {
     width: 100%;
     border: none;

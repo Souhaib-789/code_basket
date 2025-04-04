@@ -18,15 +18,18 @@
 
 .secondaryBtn{
   width: 100%;
-  background-color: var(--light-blue);
-  outline: 0;
-  border: 0;
+  background-color: var(--white-color);
+  /* outline: 0; */
+  /* border: 0; */
   border-radius: 8px;
   height: 40px;
   cursor: pointer;
-  color: var(--primary-color);
-  opacity: 1;
-  transition: opacity 300ms ease;
+  /* color: var(--primary-color); */
+  /* opacity: 1; */
+  
+  border-color: var(--secondary-color) !important;
+  border-width: 1px !important;
+  /* transition: opacity 300ms ease; */
   font-family: var(--font-family);
   display: flex;
   flex-direction: row;
@@ -52,12 +55,14 @@
 }
 .secontouchbtn{
   width: 100%;
-  background-color: var(--light-blue);
+  background-color: var(--light-secondary);
   outline: 0;
   border: 0;
   border-radius: 8px;
   height: 40px;
   cursor: pointer;
+  border-color: var(--secondary-color) !important;
+  border-width: 2px !important;
   color: #fff;
   opacity: 0.5;
   font-family: var(--font-family);

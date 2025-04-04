@@ -3,7 +3,7 @@
     flex-direction: column;
     /* align-items: center;
     justify-content: center; */
-    /* width: 300px; */
+    width: 300px;
 }
 .imageBox{
     width: 100px;
@@ -38,4 +38,22 @@
     margin-top: 10px;
     width: 90%;
 
+
+}
+
+@media screen and (max-width: 768px) {
+    .modalCont{
+        width: 90% !important;
+    }
+    .imageBox{
+        width: 80px;
+        height: 80px;
+    }
+    .heading{
+        font-size: var(--heading2-font-size);
+    }
+    .btn{
+        width: 80%;
+    }
+    
 }

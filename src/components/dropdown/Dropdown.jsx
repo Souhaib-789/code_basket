@@ -54,6 +54,7 @@ const Dropdown = (props) => {
             label: (
               <div className={styles.dropdown_row}>
               <TextComponent
+              className={styles.dropdown_text}
                 style={{
                   color:
                     selectedValue == option?.value

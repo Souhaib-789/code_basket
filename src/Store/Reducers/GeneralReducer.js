@@ -4,9 +4,8 @@ let initialState = {
   showAlert: false,
   alertOptions: null,
   loading: false,
-  GeneralTypes: null,
-  showRinging: false,
-  ringingOptions: null,
+  uploadingLoading: false,
+
   sessionExpired: false,
 };
 
@@ -23,16 +22,15 @@ const GeneralReducer = (state = initialState, action) => {
     case ActionTypes.HIDE_ALERT:
       state = { ...state, showAlert: false, alertOptions: null };
       break;
-    case ActionTypes.SHOW_RINGING:
-      state = { ...state, showRinging: true, ringingOptions: action.payload };
-      break;
-    case ActionTypes.DECLINE_RINGING:
-      state = { ...state, showRinging: false, ringingOptions: action.payload };
+
+    case ActionTypes.SHOW_UPLOADING_LOADING:
+      state = { ...state, uploadingLoading: true };
       break;
 
-    case ActionTypes.HIDE_RINGING:
-      state = { ...state, showRinging: false, ringingOptions: null };
+    case ActionTypes.HIDE_UPLOADING_LOADING:
+      state = { ...state, uploadingLoading: false };
       break;
+
 
     case ActionTypes.SHOW_LOADING:
       state = { ...state, loading: true };
@@ -42,13 +40,6 @@ const GeneralReducer = (state = initialState, action) => {
       state = { ...state, loading: false };
       break;
 
-    case ActionTypes.GENERAL_TYPES:
-      state = { ...state, GeneralTypes: action.payload };
-      break;
-
-    case ActionTypes.UPDATE_TYPES:
-      state = { ...state, GeneralTypes: { ...state?.GeneralTypes, ...action.payload } };
-      break;
 
     default:
       break;

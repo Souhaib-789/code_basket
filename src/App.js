@@ -6,6 +6,7 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./routes";
 import AlertComp from "./components/alert/Alert";
 import Loading from "./components/loadingComp/Loading";
+import UploadingLoader from "./components/loadingComp/UploadingLoader";
 
 
 
@@ -35,6 +36,7 @@ function App() {
     <>
       <AlertComp />
       <Loading />
+      <UploadingLoader />
       <RouterProvider router={router} />
     </>
   );

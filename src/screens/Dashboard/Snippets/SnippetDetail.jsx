@@ -9,7 +9,8 @@ import TextComponent from '../../../components/textComponent/TextComponent';
 import { clearSnippetDetail } from '../../../Store/Actions/SnippetActions';
 import { MdOutlineContentCopy } from 'react-icons/md';
 import { LuCopy, LuCopyCheck } from 'react-icons/lu';
-
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const SnippetDetail = () => {
 
@@ -19,6 +20,7 @@ const SnippetDetail = () => {
     const { item } = location.state
 
     const DATA = useSelector(state => state.SnippetReducer?.snippetDetails)
+    const USER = useSelector(state => state.AuthReducer?.user);
 
     const [loading, setLoading] = useState(true);
 
@@ -38,7 +40,6 @@ const SnippetDetail = () => {
             .catch((error) => { setLoading(false) })
     }
 
-    console.log(DATA)
 
 
     const [copied, setCopied] = useState(false);
@@ -102,7 +103,7 @@ const SnippetDetail = () => {
                                     <div className={styles.pro_row}>
                                         <img src={DATA?.created_by?.image ? DATA?.created_by?.image : require('../../../assets/images/dummy.png')} alt="" className={styles.avatar} />
                                         <div style={{ display: 'flex', flexDirection: 'column' }}>
-                                            <div onClick={() => navigate('/profile', { state: { screenType: 'detail', data: DATA?.created_by } })}>
+                                            <div onClick={(USER?.id, DATA?.created_by?.id) ? null : () => navigate('/profile', { state: { screenType: 'detail', data: DATA?.created_by } })}>
                                                 <TextComponent text={DATA?.created_by?.name ? DATA?.created_by?.name : '--'} className={styles.text} style={{ textDecorationLine: 'underline', cursor: 'pointer' }} />
                                             </div>
                                             <TextComponent text={DATA?.created_by?.bio ? DATA?.created_by?.bio : '--'} className={styles.span} />
@@ -123,9 +124,13 @@ const SnippetDetail = () => {
 
                                             {copied ? 'Copied!' : 'Copy'}
                                         </button>
-                                        <pre className={styles.usage_code}>
+                                        {/* <pre className={styles.usage_code}>
                                             <code>{DATA?.snippet}</code>
-                                        </pre>
+                                        </pre> */}
+
+                                        <SyntaxHighlighter language={DATA?.language?.toLowerCase()} style={dracula}>
+                                            {DATA?.snippet}
+                                        </SyntaxHighlighter>
                                     </div>
                                 </div>
 
@@ -141,12 +146,19 @@ const SnippetDetail = () => {
                                         <div className={styles.code_block}>
 
                                             <button className={styles.copy_button} onClick={() => copyToClipboard(DATA?.usage_example?.code)}>
+                                                {copied ? <LuCopyCheck color='white' size={15} />
+                                                    : <LuCopy color='white' size={15} />
+                                                }
                                                 {copied ? 'Copied!' : 'Copy'}
                                             </button>
 
-                                            <pre className={styles.usage_code}>
-                                                <code>{DATA?.usage_example?.code}</code>
-                                            </pre>
+                                            <SyntaxHighlighter language={DATA?.language?.toLowerCase()} style={dracula}>
+                                                {/* <pre className={styles.usage_code}>
+                                                    <code>{DATA?.usage_example?.code}</code>
+                                                </pre> */}
+                                                {DATA?.usage_example?.code}
+
+                                            </SyntaxHighlighter>
 
                                         </div>
                                     </div>

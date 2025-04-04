@@ -194,7 +194,8 @@
 
   
 .heading{
-  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .dropdown{
@@ -210,5 +211,11 @@
   }
   .saleCont {
     width: 100%;
+  }
+
+
+
+  .dropdown{
+    width: 90%;
   }
 }

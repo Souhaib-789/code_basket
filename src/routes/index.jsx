@@ -4,10 +4,12 @@ import Login from "../screens/Auth/Login/Login";
 import Signup from "../screens/Auth/SignUp/Signup";
 import { ProtectedLayout } from "./ProtectedRoutes";
 import { HomeLayout } from "./PublicRoutes";
-import UploadSnippet from "../screens/UploadSnippet/UploadSnippet";
 import Dashboard from "../screens/Dashboard/Dashboard";
 import SnippetDetail from "../screens/Dashboard/Snippets/SnippetDetail";
 import Profile from "../screens/Profile/Profile";
+import MyBasket from "../screens/MyBasket/MyBasket";
+import About from "../screens/About/About";
+import Feedback from "../screens/Feedback/Feedback";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -15,14 +17,15 @@ export const router = createBrowserRouter(
       <Route element={<HomeLayout />}>
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        {/* <Route path="/accountSetup" element={<AccountSetup />} /> */}
       </Route>
 
       <Route element={<ProtectedLayout />}>
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/uploadSnippet" element={<UploadSnippet />} />
+        <Route path="/myBasket" element={<MyBasket />} />
         <Route path="/snippetDetail" element={<SnippetDetail />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/feedback" element={<Feedback />} />
 
       </Route>
       

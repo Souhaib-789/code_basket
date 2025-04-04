@@ -1,16 +1,18 @@
 import { Menu } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useLocation, useNavigate } from "react-router";
-import useWindowDimensions from "../../hooks/useWindowDimensions";
 import "./sideMenu.css";
 import { AuthMiddleware } from "../../Store/Middlewares/AuthMiddleware";
-import Storage from "../../utilities/AsyncStorage";
 import { checkRouteName } from "../../utilities/utilities";
-import { FaSignOutAlt } from "react-icons/fa";
 import { FiHome } from "react-icons/fi";
-import { GoFileCode } from "react-icons/go";
-import { LuFileCode2 } from "react-icons/lu";
+import { LuFileCode2, LuUser } from "react-icons/lu";
+import { BiBasket, BiSolidBasket } from "react-icons/bi";
+import { CiLogout } from "react-icons/ci";
+import { IoLogOutOutline } from "react-icons/io5";
+import ModalComponent from "../modal/ModalComponent";
+import TextComponent from "../textComponent/TextComponent";
+import SubmitButton from "../submitButton/SubmitButton";
 
 const menuStyle = {
   borderRadius: 0,
@@ -25,6 +27,16 @@ const menuStyle = {
 
 
 
+
+const SideMenu = ({ collapsed, onBackClick }) => {
+  const dispatch = useDispatch();
+  const navigation = useNavigate();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [openLogoutModal, setOpenLogoutModal] = useState(false);
+
+
+  
 const MenuList = (navigation, logout) => {
   return [
     {
@@ -37,30 +49,53 @@ const MenuList = (navigation, logout) => {
       },
     },
     {
-        style: menuStyle,
-        key: "uploadSnippet",
-        icon: <LuFileCode2  className="sidebarIcon" />,
-        label: <h4 className="menu-lable">My Basket</h4>,
-        onClick: () => {
-          navigation("/uploadSnippet");
-        },
+      style: menuStyle,
+      key: "myBasket",
+      icon: <BiBasket className="sidebarIcon" />,
+      label: <h4 className="menu-lable">My Basket</h4>,
+      onClick: () => {
+        navigation("/myBasket");
       },
+    },
+    {
+      style: menuStyle,
+      key: "profile",
+      icon: <LuUser className="sidebarIcon" />,
+      label: <h4 className="menu-lable">Profile</h4>,
+      onClick: () => {
+        navigation("/profile");
+      },
+    },
+    {
+      style: menuStyle,
+      key: "about",
+      icon: <LuFileCode2 className="sidebarIcon" />,
+      label: <h4 className="menu-lable">About</h4>,
+      onClick: () => {
+        navigation("/about");
+      },
+    },
+
+    // {
+    //   style: menuStyle,
+    //   key: "feedback",
+    //   icon: <MdOutlineFeedback className="sidebarIcon" />      ,
+    //   label: <h4 className="menu-lable">Feedback</h4>,
+    //   onClick: () => {
+    //     navigation("/feedback");
+    //   },
+    // },
     {
       style: menuStyle,
       key: "logout",
-      icon: <FaSignOutAlt className="sidebarIcon" />,
+      icon: <IoLogOutOutline className="sidebarIcon" />,
       label: <h4 className="menu-lable">Logout</h4>,
-      onClick: logout,
+      onClick: () => {
+        setOpenLogoutModal(true);
+      },
     },
   ];
 };
-
-const SideMenu = ({ collapsed, onBackClick }) => {
-  const dispatch = useDispatch();
-  const navigation = useNavigate();
-  const location = useLocation();
-  const navigate = useNavigate();
-
 
   const logout = () => {
     dispatch(AuthMiddleware.logout()).then((data) => {
@@ -76,13 +111,13 @@ const SideMenu = ({ collapsed, onBackClick }) => {
       <div className="logo_container">
         {collapsed ? (
           <img
-            src={require("../../assets/images/sidebarIcons/sideLogo.png")}
+            src={require("../../assets/images/sideLogo.png")}
             alt="logo"
             style={{ width: "50%", height: "50%" }}
           />
         ) : (
           <img
-            src={require("../../assets/images/sidebarIcons/sideLogo.png")}
+            src={require("../../assets/images/sideLogo.png")}
             alt="logo"
             style={{ width: "70%", height: "70%" }}
           />
@@ -96,6 +131,16 @@ const SideMenu = ({ collapsed, onBackClick }) => {
         selectedKeys={checkRouteName(location.pathname?.substring(1))}
         items={menus}
       />
+
+      <ModalComponent  open={openLogoutModal} closable onCancel={() => setOpenLogoutModal(false)} >
+        <TextComponent text={'Logout'} className="logout_text" />
+        <TextComponent text={'Are you sure you want to logout?'} className="logout_sub_text" />
+        <div className="logout_btn_container">
+          <SubmitButton title={'Cancel'} secondaryBtn btnClass="cancel_btn" onClick={() => { setOpenLogoutModal(false) }} />
+          <SubmitButton title={'Yes'} primaryBtn btnClass="logout_btn" onClick={logout} />
+        </div>
+
+      </ModalComponent>
     </div>
   );
 };
