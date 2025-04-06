@@ -9,6 +9,7 @@
     "antd": "^5.23.4",
     "axios": "^1.7.9",
     "cra-template": "1.2.0",
+    "framer-motion": "^12.6.3",
     "fs-react": "^0.0.4",
     "lottie-react": "^2.4.1",
     "react": "^19.0.0",

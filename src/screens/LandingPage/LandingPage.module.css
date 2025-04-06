@@ -1,0 +1,486 @@
+.container {
+    width: 100%;
+    /* margin: auto; */
+    /* padding: 40px 20px; */
+    font-family: "Inter", sans-serif;
+    background: #fff;
+    color: #1a1a1a;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.logo {
+    width: 13rem;
+    height: 50px;
+    object-fit: cover;
+}
+
+.navRight {
+    display: flex;
+    align-items: center;
+}
+
+.menuIcon {
+    display: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.mobileMenu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 999;
+}
+
+.mobileMenu a {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.link {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: var(--secondary-color);
+}
+
+.loginButton {
+    margin-left: 20px;
+    padding: 8px 15px;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.loginButton:hover {
+    background-color: var(--black-color);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.heroText {
+    flex: 1;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heroTitle {
+    text-align: center;
+    font-size: 45px;
+    color: var(--primary-color);
+    font-weight: 800;
+    margin-bottom: 1px;
+    font-family: var(--font-family);
+}
+
+.heroSubtitle {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 24px;
+}
+
+.heroButton {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 16px rgba(90, 79, 207, 0.3);
+    z-index: 1;
+}
+
+
+
+
+.heroImageView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.heroImage {
+    width: 30%;
+    height: auto;
+    display: flex;
+    align-self: center;
+    z-index: 1;
+}
+
+.shade {
+    width: 50%;
+    height: auto;
+    position: absolute;
+
+}
+
+.aboutSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15%;
+    margin-bottom: 10%;
+    align-items: center;
+}
+
+.contentSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+}
+
+.contentTitle {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px !important;
+    color: var(--primary-color)
+}
+
+.bulletPoint {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(90, 79, 207, 0.08);
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.aboutImageView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.aboutImage {
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-self: center;
+    z-index: 1;
+}
+
+
+
+.sectionTitle {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--secondary-color);
+}
+
+.featuresSection {
+    margin-bottom: 80px;
+    width: 90%;
+    margin: auto;
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.featureCard {
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+    position: relative;
+
+}
+
+.featureCard:hover {
+    transform: translateY(-6px);
+    border: 1px solid var(--secondary-color);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.featureTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.featureDescription {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.3rem;
+}
+
+.feature_icon {
+    width: 30px;
+    height: 30px;
+    color: var(--secondary-color);
+    object-fit: contain;
+}
+
+.comingSoon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 12px;
+    background-color: #ff5e5e;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.faqSection {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.faqList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faqItem {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px 20px;
+    transition: background-color 0.3s ease;
+    background-color: var(--white-color);
+    cursor: pointer;
+}
+
+.faqItem:hover {
+    background-color: var(--white-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--black-color);
+    margin-bottom: 5px;
+}
+
+.answerWrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.show {
+    max-height: 300px;
+}
+
+.answerText {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5rem;
+    padding-top: 5px;
+}
+
+.small_icon {
+    width: 20px;
+    height: 20px;
+    color: var(--secondary-color);
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #888;
+    border-top: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+   
+    .heroTitle {
+        font-size: 40px;
+    }
+
+    .heroSubtitle {
+        font-size: 16px;
+        text-align: center;
+        width: 80%;
+        margin: 5% 0;
+        line-height: 1.3rem;
+    }
+
+    .loginButton {
+        margin: 0;
+        width: 40%;
+        margin-top: 20px;
+    }
+
+    .navRight {
+        display: none;
+    }
+
+    .menuIcon {
+        display: block;
+    }
+
+    .heroImage {
+        width: 100%;
+        height: auto;
+    }
+
+    .heroImageView {
+        width: 70%;
+        height: 70%;
+    }
+
+    .heroText {
+        margin-top: 10%;
+    }
+
+    .aboutSection {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .contentSection {
+        width: 100%;
+        text-align: center;
+    }
+
+    .aboutImageView {
+        width: 100%;
+    }
+
+    .aboutImage {
+        width: 70%;
+        height: auto;
+        margin-bottom: 5%;
+    }
+
+    .bulletPointView {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+    }
+
+    .featuresGrid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+
+@media (max-width: 480px) {
+
+
+    .logo {
+        width: 10rem;
+        height: 40px;
+    }
+
+    .heroTitle {
+        font-size: 30px;
+    }
+
+    .heroSubtitle {
+        font-size: 14px;
+        text-align: center;
+        width: 80%;
+    }
+
+    .heroButton {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .heroImageView {
+        width: 70%;
+        height: 70%;
+    }
+
+    .bulletPointView {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+    }
+
+    .featureTitle {
+        font-size: 18px;
+    }
+
+    .question_text {
+        font-size: 16px;
+        width: 80%;
+        font-weight: 400;
+        line-height: 1.3rem;
+    }
+
+    .answerText {
+        font-size: 13px;
+        line-height: 1.3rem;
+    }
+
+    .small_icon {
+        width: 22px;
+        height: 22px;
+    }
+
+
+
+
+}

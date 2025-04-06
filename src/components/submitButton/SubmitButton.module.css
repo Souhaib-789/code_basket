@@ -72,10 +72,10 @@
   justify-content: center;
 }
  .btnText{
-  font-size: 16px;
+  font-size: 14px;
   color: var(--white-color);
   font-family: var(--font-family);
-  /* font-weight: 600; */
+  font-weight: 500;
 }
 .seconbtnText{
   font-size: 16px;

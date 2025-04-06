@@ -10,6 +10,7 @@ import Profile from "../screens/Profile/Profile";
 import MyBasket from "../screens/MyBasket/MyBasket";
 import About from "../screens/About/About";
 import Feedback from "../screens/Feedback/Feedback";
+import LandingPage from "../screens/LandingPage/LandingPage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(

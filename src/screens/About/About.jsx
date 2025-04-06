@@ -93,8 +93,8 @@ const AboutUs = () => {
     return (
         <div className={styles.container}>
             <div className={styles.hero}>
-                <h1>Empowering Developers, One Snippet at a Time 🚀</h1>
-                <p>Code, Collaborate, and Contribute to a growing developer community.</p>
+                <h1>Write Once. Save Forever. Reuse Instantly. 🚀</h1>
+                <p>A smarter dev doesn’t write code twice</p>
             </div>
 
             <div className={styles.section}>

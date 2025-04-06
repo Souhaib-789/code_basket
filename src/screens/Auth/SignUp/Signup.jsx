@@ -59,7 +59,7 @@ const Signup = () => {
       </div>
       <div className={styles.rightCont}>
         <div className={styles.subRightCont}>
-          <div className={styles.backDiv} onClick={() => navigate("/")}>
+          <div className={styles.backDiv} onClick={() => navigate("/login")}>
             <IoChevronBackOutline />
             <TextComponent text={"Back"} />
           </div>
