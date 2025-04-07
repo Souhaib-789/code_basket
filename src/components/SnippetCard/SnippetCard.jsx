@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TextComponent from '../textComponent/TextComponent';
 import { FaSquareArrowUpRight } from 'react-icons/fa6';
 import styles from './SnippetCard.module.css';
@@ -8,14 +8,18 @@ import { MdDelete } from 'react-icons/md';
 import { useDispatch } from 'react-redux';
 import { SnippetsMiddleware } from '../../Store/Middlewares/SnippetsMiddleware';
 import { showAlert } from '../../Store/Actions/GeneralActions';
+import ModalComponent from '../modal/ModalComponent';
+import SubmitButton from '../submitButton/SubmitButton';
 
 const SnippetCard = ({ del, item, index }) => {
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const [openDeleteModal, setOpenDeleteModal] = useState(false)
+    const [currItem, setCurrItem] = useState(null)
 
-    const onClickDelSnippet = (id) => {
-        dispatch(SnippetsMiddleware.deleteCodeSnippet({ id: id }))
+    const onClickDelSnippet = () => {
+        dispatch(SnippetsMiddleware.deleteCodeSnippet({ id: currItem?.id }))
             .then((data) => {
                 dispatch(showAlert({ message: 'Snippet Deleted Successfully', type: 'success' }))
             }
@@ -40,7 +44,7 @@ const SnippetCard = ({ del, item, index }) => {
 
                             {
                                 del ?
-                                    <div className={styles.colored_icon} style={{ cursor: 'pointer' }} onClick={() => { onClickDelSnippet(item?.id) }}>
+                                    <div className={styles.colored_icon} style={{ cursor: 'pointer' }} onClick={() => { setCurrItem(item); setOpenDeleteModal(true) }}>
                                         <MdDelete color={'var(--secondary-color)'} className={styles.delete_icon} />
                                     </div>
                                     :
@@ -69,6 +73,15 @@ const SnippetCard = ({ del, item, index }) => {
                 </div>
             </div>
 
+            <ModalComponent open={openDeleteModal} closable onCancel={() => setOpenDeleteModal(false)} >
+                    <img src={require('../../assets/images/delete.png')} className={styles.modal_image} />
+                <TextComponent text={`Are you sure you want to delete ${currItem?.title} from your basket ?`} className={styles.modal_text} />
+                <div className={styles.modal_btn_container}>
+                    <SubmitButton title={'Cancel'} secondaryBtn btnClass={styles.cancel_btn} onClick={() => { setOpenDeleteModal(false) ; setCurrItem(null)}} />
+                    <SubmitButton title={'Yes'} primaryBtn btnClass={styles.modal_btn} onClick={onClickDelSnippet} />
+                </div>
+
+            </ModalComponent>
         </div>
     );
 };

@@ -96,6 +96,8 @@
     justify-content: center;
   }
   .mainHeaderDiv {
+    margin: 0;
+    border-radius: 0px;
     padding-left: 20px;
     padding-top: 15px;
   }

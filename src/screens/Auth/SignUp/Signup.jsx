@@ -95,7 +95,7 @@ const Signup = () => {
               <InputField
                 className={styles.twoInputs}
                 label={"Password"}
-                placeholder={"●●●●●●●●●●"}
+                placeholder={"Enter password"}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 rightIcon={
@@ -111,7 +111,7 @@ const Signup = () => {
               <InputField
                 className={styles.twoInputs}
                 label={"Confirm Password"}
-                placeholder={"●●●●●●●●●●"}
+                placeholder={"Enter password"}
                 value={confirmPass}
                 onChange={(e) => setConfirmPass(e.target.value)}
                 rightIcon={

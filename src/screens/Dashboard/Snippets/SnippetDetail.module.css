@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 100%;
   min-height: 80vh;
-  padding: 20px 35px;
+  padding: 20px 20px;
   border-radius: 10px;
   background-color: var(--white-color);
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -11,9 +11,14 @@
 
 }
 
+.right_section{
+  width: 95%;
+}
+
 .avatar{
   width: 30px;
   height: 30px;
+  object-fit: cover;
   border-radius: 50%;
   margin-right: 10px;
 }
@@ -24,7 +29,7 @@
 
 .row {
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
 .pro_row {
@@ -54,14 +59,12 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-/* Title styling */
 .snippet_title {
   font-size: 30px;
   font-family: var(--font-family);
   font-weight: bold;
 }
 
-/* Metadata tags (language & framework) */
 .snippet_meta {
   display: flex;
   gap: 10px;
@@ -78,7 +81,6 @@
 
 }
 
-/* Description styling */
 .snippet_description {
   font-size: 1.1rem;
   line-height: 1.6;
@@ -88,10 +90,10 @@
 
 }
 
-/* Usage section */
 .usage_section {
   border-top: 1px solid #dee2e6;
   padding-top: 20px;
+
 }
 
 .usage_title {
@@ -121,22 +123,7 @@
 
 }
 
-.back_button {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: transparent;
-  border: none;
-  font-size: 1rem;
-  color: #007bff;
-  cursor: pointer;
-  transition: color 0.2s ease;
-  z-index: 10;
-}
 
-.back_button:hover {
-  color: #0056b3;
-}
 
 .skeleton_heading {
   display: block;
@@ -178,9 +165,7 @@
   border-radius: 10
 }
 
-/* Code block styling */
 .usage_code {
-  /* background-color: #f1f1f1; */
   padding: 15px;
   border-radius: 4px;
   overflow-x: auto;
@@ -192,18 +177,11 @@
 
 .code_block {
    position: relative;
-  /* background-color: #000;  */
   color: #fff;
-  /* padding: 20px; */
-  /* border-radius: 4px; */
-  /* overflow-x: auto; */
-  /* font-family: 'Source Code Pro', monospace; */
-  /* Or any monospace font */
   font-size: 0.95rem;
   margin-top: 20px;
 }
 
-/* Copy Button positioned at the top right */
 .copy_button {
   position: absolute;
   top: 10px;
@@ -230,16 +208,24 @@
 pre {
   margin: 0;
   white-space: pre-wrap;
-  /* Wrap code lines if needed */
 }
 
 @media (max-width: 768px) {
   .detail_page_container {
     padding: 20px;
+      border-radius: 0px;
   }
 
+  
+.right_section{
+  width: 100%;
+}
+
   .backIcon {
-    margin-top: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
   }
 
   .snippet_title {
@@ -251,7 +237,7 @@ pre {
   }
 
   .snippet_description {
-    font-size: 1rem;
+    font-size: 13px;
   }
 
   .usage_title {
@@ -288,6 +274,7 @@ pre {
   .avatar{
     width: 25px;
     height: 25px;
+
   }
 }
 

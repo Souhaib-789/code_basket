@@ -150,11 +150,11 @@ const MyBasket = () => {
                     <TextComponent text={"My Code Snippets"} className={styles.heading} />
 
                     <SubmitButton
-                    textClass={styles.btn_txt}
-                    leftIcon={<VscAdd color="white" size={18} />}
-                    title="Add Snippet" onClick={() => {
-                        setIsModalOpen(true)
-                    }} btnClass={styles.addBtn} style={{ marginTop: 0 }} />
+                        textClass={styles.btn_txt}
+                        leftIcon={<VscAdd color="white" size={18} />}
+                        title="Add Snippet" onClick={() => {
+                            setIsModalOpen(true)
+                        }} btnClass={styles.addBtn} style={{ marginTop: 0 }} />
                 </div>
 
 
@@ -170,8 +170,8 @@ const MyBasket = () => {
                             (
 
                                 SNIPPETS_LIST?.length === 0 ?
-                                <ListEmptyComponent text={'Your code basket is empty !'} snippet />
-                                :
+                                    <ListEmptyComponent text={'Your code basket is empty !'} snippet />
+                                    :
                                     SNIPPETS_LIST?.map((item, index) => <SnippetCard del item={item} index={index} />)
                             )
                     }
@@ -208,7 +208,7 @@ const MyBasket = () => {
                     onChange={e => setCodeSnippet(e.target.value)}
                     label="Code Snippet"
                     placeholder="Enter your code snippet here"
-                    inputClass={styles.input}
+                    inputClass={styles.code_input}
                     textArea
                     rows={10}
                 />
@@ -221,8 +221,10 @@ const MyBasket = () => {
                     inputClass={styles.input}
                 />
 
-                <SubmitButton title="Upload" onClick={onUploadSnippet}  btnClass={styles.uploadBtn} />
+                <SubmitButton title="Upload" onClick={onUploadSnippet} btnClass={styles.uploadBtn} />
             </RightModal>
+
+          
         </div>
     );
 };

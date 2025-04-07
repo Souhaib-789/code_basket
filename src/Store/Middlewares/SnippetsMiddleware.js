@@ -1,7 +1,7 @@
 import supabase from "../../config/supabase-client";
 import { hideLoading, hideUploadingLoading, showAlert, showLoading, showUploadingLoading } from "../Actions/GeneralActions";
 import { chatSession } from "../../config/aiModel";
-import { getMySnippets, getSnippetDetail, getSnippetsList } from "../Actions/SnippetActions";
+import { deleteSnippet, getMySnippets, getSnippetDetail, getSnippetsList } from "../Actions/SnippetActions";
 
 
 export const SnippetsMiddleware = {
@@ -184,7 +184,7 @@ export const SnippetsMiddleware = {
                     }
                     else {
                         resolve(true)
-                        
+                        dispatch(deleteSnippet(params?.id))
                     }
 
                 } catch (error) {

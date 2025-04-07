@@ -96,7 +96,7 @@
   align-items: center;
 }
 .twoInputs {
-  width: 49%;
+  width: 47% !important;
 }
 .link {
   color: var(--secondary-color);

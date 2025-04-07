@@ -404,7 +404,7 @@
     }
 
     .aboutImage {
-        width: 70%;
+        width: 90%;
         height: auto;
         margin-bottom: 5%;
     }
@@ -457,6 +457,10 @@
         align-items: center;
         gap: 10px;
 
+    }
+
+    .bulletPoint{
+        font-size: 14px;
     }
 
     .featureTitle {

@@ -11,7 +11,7 @@ const UploadingLoader = () => {
         <div className="loadingClass">
             <div className="loadingInnerClass">
             <Lottie animationData={ROCKET} loop={true} style={{width: '70%', height: '70%'}} />
-            <TextComponent text='Uploading ...' style={{ color: 'var(--light-text)', fontSize: '20px', fontWeight: 'bold'}} />
+            <TextComponent text='Uploading ...' style={{ color: 'var(--black-color)', fontSize: '20px'}} />
             </div>
         </div>
     )

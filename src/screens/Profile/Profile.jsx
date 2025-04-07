@@ -66,8 +66,10 @@ const Profile = () => {
             name: name,
             bio: bio,
             image: selectedImage ? selectedImage : undefined,
-            user_id: USER?.sub
+            user_id: USER?.id
         }
+        console.log(data);
+        
 
         dispatch(AuthMiddleware.updateProfile(data))
             .then((data) => { navigate('/dashboard') })
@@ -147,9 +149,9 @@ const Profile = () => {
                     <img
                         onClick={handleFileHandler}
 
-                        src={selectedImage ? URL.createObjectURL(selectedImage) : screenType == 'detail' ? (routeData?.image) : USER?.image ? USER?.image : AVATAR} className={styles.avatar} />
+                        src={selectedImage ? URL.createObjectURL(selectedImage) : USER?.image ? USER?.image : AVATAR} className={styles.avatar} />
                     <input
-                        disabled={screenType == 'detail' ? true : false}
+                        // disabled={screenType == 'detail' ? true : false}
                         type="file"
                         accept="image/*"
                         onChange={handleFileChange}
@@ -160,7 +162,7 @@ const Profile = () => {
                 </div>
 
                 <InputField
-                    disabled={screenType == 'detail' ? true : false}
+                    // disabled={screenType == 'detail' ? true : false}
                     value={name}
                     onChange={e => setname(e.target.value)}
                     label="Name"
@@ -170,7 +172,7 @@ const Profile = () => {
                 />
 
                 <InputField
-                    disabled={screenType == 'detail' ? true : false}
+                    // disabled={screenType == 'detail' ? true : false}
                     value={bio}
                     onChange={e => setbio(e.target.value)}
                     label="Bio"

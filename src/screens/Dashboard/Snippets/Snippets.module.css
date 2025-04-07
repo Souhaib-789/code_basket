@@ -1,9 +1,4 @@
-/* .mainCont {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 20px;
-} */
+
 
 .mainCont {
     display: grid;
@@ -115,6 +110,8 @@
     .mainCont {
         grid-template-columns: repeat(1, 1fr);
     }
+
+  
 
     .card_sub_view {
         display: flex;

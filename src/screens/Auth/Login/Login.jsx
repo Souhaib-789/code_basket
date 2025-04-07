@@ -59,7 +59,7 @@ function Login() {
             <div className={styles.inputDiv}>
               <InputField
                 className={styles.input}
-                label={"Email Address"}
+                label={"Email"}
                 placeholder={"Enter email"}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -67,7 +67,7 @@ function Login() {
               <InputField
                 className={styles.input}
                 label={"Password"}
-                placeholder={"●●●●●●●●●●"}
+                placeholder={"Enter password"}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 rightIcon={

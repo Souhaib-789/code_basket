@@ -40,6 +40,13 @@ const clearMySnippets = () => {
     };
 }
 
+const deleteSnippet = payload => {
+    return {
+        type: ActionTypes.DELETE_SNIPPET,
+        payload: payload,
+    };
+}
 
-export {  getSnippetsList, clearSnippetsList, getSnippetDetail, clearSnippetDetail, getMySnippets, clearMySnippets };
+
+export {deleteSnippet,  getSnippetsList, clearSnippetsList, getSnippetDetail, clearSnippetDetail, getMySnippets, clearMySnippets };
 

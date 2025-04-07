@@ -66,6 +66,7 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 @media only screen and (max-width: 992px) {
 }
 
@@ -74,7 +75,7 @@ input::-webkit-inner-spin-button {
 
 @media only screen and (max-width: 576px) {
   .label {
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .input {

@@ -25,6 +25,12 @@ const SnippetReducer = (state = initialState, action) => {
       state = { ...state, mySnippets: [] };
       break;
 
+    case ActionTypes.DELETE_SNIPPET:
+      const newSnippets = [...state?.mySnippets]
+      newSnippets.splice(newSnippets.findIndex((item) => item.id == action.payload), 1)
+      state = { ...state, mySnippets: newSnippets };
+      break;
+
 
     case ActionTypes.GET_SNIPPET_DETAIL:
       state = { ...state, snippetDetails: action.payload };

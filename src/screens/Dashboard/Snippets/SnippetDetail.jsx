@@ -63,7 +63,7 @@ const SnippetDetail = () => {
                 </div>
 
 
-                <div style={{ width: '100%' }}>
+                <div className={styles.right_section}>
                     {
                         loading ?
                             <div className={styles.skeleton_container}>
@@ -103,7 +103,7 @@ const SnippetDetail = () => {
                                     <div className={styles.pro_row}>
                                         <img src={DATA?.created_by?.image ? DATA?.created_by?.image : require('../../../assets/images/dummy.png')} alt="" className={styles.avatar} />
                                         <div style={{ display: 'flex', flexDirection: 'column' }}>
-                                            <div onClick={(USER?.id, DATA?.created_by?.id) ? null : () => navigate('/profile', { state: { screenType: 'detail', data: DATA?.created_by } })}>
+                                            <div onClick={(USER?.id == DATA?.created_by?.id) ? null : () => navigate('/profile', { state: { screenType: 'detail', data: DATA?.created_by } })}>
                                                 <TextComponent text={DATA?.created_by?.name ? DATA?.created_by?.name : '--'} className={styles.text} style={{ textDecorationLine: 'underline', cursor: 'pointer' }} />
                                             </div>
                                             <TextComponent text={DATA?.created_by?.bio ? DATA?.created_by?.bio : '--'} className={styles.span} />
