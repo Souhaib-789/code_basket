@@ -80,6 +80,7 @@
 .name {
   font-size: 25px;
   font-weight: bold;
+
 }
 
 .row {
@@ -101,10 +102,29 @@
   color: var(--dark-secondary);
 }
 
+.bio{
+  font-size: 13px;
+  color: var(--dark-secondary);
+  line-height: 1.1rem;
+}
+
 .profileDetails {
   display: flex;
   flex-direction: column;
-  gap: 8px
+  gap: 13px;
+  width: 60%;
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.no_Details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 30%;
+  
 }
 
 
@@ -130,6 +150,7 @@
 
 .top_button {
   height: 35px;
+  width: 40%;
 }
 
 .btn_text {
@@ -272,6 +293,32 @@
   .profileDetails{
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    padding: 20px ;
+    margin-top: 5%;
+
+  }
+
+  .top_button{
+    height: 30px;
+    width: 100%;
+  }
+
+  .no_Details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 90%;
+    margin-top: 10%;
+  }
+
+  .bio{
+   text-align: center;
+    
   }
   .input{
     width: 100%;

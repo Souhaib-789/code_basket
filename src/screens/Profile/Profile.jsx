@@ -100,7 +100,7 @@ const Profile = () => {
 
                         <div className={styles.profileDetails}>
                             <TextComponent text={name} className={styles.name} />
-                            <TextComponent text={bio} />
+                            <TextComponent text={bio} className={styles.bio}/>
                             <SubmitButton title={screenType == 'detail' ? 'Get in touch' : 'Edit Profile'} secondaryBtn textClass={styles.btn_text} btnClass={styles.top_button}
                                 onClick={screenType == 'detail' ? () => {
                                     window.open(`mailto:${email}`, '_blank');
@@ -110,7 +110,7 @@ const Profile = () => {
                         </div>
                     </div>
 
-                    <div className={styles.profileDetails}>
+                    <div className={styles.no_Details}>
                         <TextComponent text={'No of snippets uploaded'} />
                         <TextComponent text={DEVELOPER_SNIPPETS?.length} className={styles.no_of_snippet} />
                     </div>

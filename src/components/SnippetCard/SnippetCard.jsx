@@ -22,11 +22,16 @@ const SnippetCard = ({ del, item, index }) => {
         dispatch(SnippetsMiddleware.deleteCodeSnippet({ id: currItem?.id }))
             .then((data) => {
                 dispatch(showAlert({ message: 'Snippet Deleted Successfully', type: 'success' }))
+              
             }
             )
             .catch((error) => {
                 console.log(error)
-            })
+            }).finally(() => {
+                setOpenDeleteModal(false)
+                setCurrItem(null)
+            }
+        )
     }
 
     return (

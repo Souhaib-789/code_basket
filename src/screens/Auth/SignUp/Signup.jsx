@@ -47,7 +47,7 @@ const Signup = () => {
     }
     else {
       dispatch(AuthMiddleware.signUp({ email, password, Name, bio }))
-        .then(() => navigate('/'))
+        .then(() => navigate('/login'))
         .catch((error) => console.log(error))
     }
   }
