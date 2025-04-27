@@ -45,6 +45,7 @@
   width: 30px;
   height: 30px;
   border-radius: 50px;
+  object-fit: cover;
 }
 
 /* @media only screen and (max-width: 992px) {

@@ -83,6 +83,12 @@
 
 }
 
+.namex {
+  font-size: 25px;
+  color: var(--input-border);
+
+}
+
 .row {
   display: flex;
   flex-direction: row;
@@ -102,17 +108,23 @@
   color: var(--dark-secondary);
 }
 
+.biox{
+  font-size: 13px;
+  color: var(--input-border);
+  line-height: 1.1rem;
+}
+
+
 .bio{
   font-size: 13px;
   color: var(--dark-secondary);
-  line-height: 1.1rem;
 }
 
 .profileDetails {
   display: flex;
   flex-direction: column;
   gap: 13px;
-  width: 60%;
+  width: 70% !important;
   background-color: #fff;
   padding: 15px 20px;
   border-radius: 8px;
@@ -150,7 +162,7 @@
 
 .top_button {
   height: 35px;
-  width: 40%;
+  /* width: 50% !important; */
 }
 
 .btn_text {
@@ -163,6 +175,7 @@
   flex-direction: row;
   align-items: center;
   gap: 20px;
+  width: 50%;
 }
 
 .colored_icon {
@@ -184,6 +197,14 @@
 .btn_text{
   font-size: 13px;
   font-weight: 500;
+}
+
+.modal_image{
+  margin-top: 5%;
+  width: 80%;
+  height: 30%;
+  border-radius: 10px;
+  object-fit: contain;
 }
 
 @media only screen and (max-width: 768px) {
@@ -245,6 +266,7 @@
 
   .top_button {
     height: 30px;
+
   }
   .btn_text {
     font-size: 10px;

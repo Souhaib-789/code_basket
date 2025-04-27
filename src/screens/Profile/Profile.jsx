@@ -13,6 +13,7 @@ import { SnippetsMiddleware } from '../../Store/Middlewares/SnippetsMiddleware';
 import ListEmptyComponent from '../../components/ListEmptyComponent/ListEmptyComponent';
 import { Skeleton } from 'antd';
 import SnippetCard from '../../components/SnippetCard/SnippetCard';
+import ModalComponent from '../../components/modal/ModalComponent';
 
 const Profile = () => {
 
@@ -25,7 +26,7 @@ const Profile = () => {
     const routeData = location?.state?.data
     const DEVELOPER_SNIPPETS = useSelector(state => state.SnippetReducer?.mySnippets);
 
-    
+
 
     const [name, setname] = useState(screenType == 'detail' ? (routeData?.name || '--') : USER?.name);
     const [email, setemail] = useState(screenType == 'detail' ? (routeData?.email || '--') : USER?.email);
@@ -34,13 +35,14 @@ const Profile = () => {
     const hiddenFileInput = useRef(null);
 
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [openImageViewingModal, setopenImageViewingModaleModal] = useState(false);
     const [loading, setLoading] = useState(true);
 
 
 
     useEffect(() => {
         if (screenType == 'detail') {
-        fetchDeveloperSnippets()
+            fetchDeveloperSnippets()
         }
     }, [])
 
@@ -69,7 +71,7 @@ const Profile = () => {
             user_id: USER?.id
         }
         console.log(data);
-        
+
 
         dispatch(AuthMiddleware.updateProfile(data))
             .then((data) => { navigate('/dashboard') })
@@ -94,13 +96,13 @@ const Profile = () => {
                 <div className={styles.row}>
                     <div className={styles.formRow}>
 
-                        <div className={styles.profileWrapper}>
+                        <div className={styles.profileWrapper} onClick={() => setopenImageViewingModaleModal(true)}>
                             <img src={screenType == 'detail' ? (routeData?.image) : USER?.image ? USER?.image : AVATAR} className={styles.avatar} />
                         </div>
 
                         <div className={styles.profileDetails}>
-                            <TextComponent text={name} className={styles.name} />
-                            <TextComponent text={bio} className={styles.bio}/>
+                            <TextComponent text={name || 'Your name'} className={name ? styles.name : styles.namex} />
+                            <TextComponent text={bio || 'Your bio'} className={bio ? styles.bio : styles.biox} />
                             <SubmitButton title={screenType == 'detail' ? 'Get in touch' : 'Edit Profile'} secondaryBtn textClass={styles.btn_text} btnClass={styles.top_button}
                                 onClick={screenType == 'detail' ? () => {
                                     window.open(`mailto:${email}`, '_blank');
@@ -183,6 +185,10 @@ const Profile = () => {
 
                 <SubmitButton title="Save Changes" onClick={onSaveChanges} textClass={styles.btn_text} btnClass={styles.saveBtn} />
             </RightModal>
+
+            <ModalComponent open={openImageViewingModal} closable onCancel={() => setopenImageViewingModaleModal(false)} >
+                <img src={screenType == 'detail' ? (routeData?.image) : USER?.image ? USER?.image : AVATAR} className={styles.modal_image} />
+            </ModalComponent>
         </div>
     );
 };
