@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src='https://souhaib-dev.netlify.app/assets/img/codebasket/cb3.PNG' width='1000px' height='500px' />
 
-## Available Scripts
+# CodeBasket
 
-In the project directory, you can run:
+**Your one-stop basket for developer tools, code snippets, project templates, and tech resources — beautifully organized and easily accessible.**  
 
-### `npm start`
+🎯 *Built for devs who hate wasting time searching for that "one piece of code"*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📌 Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 📚 **Code Snippet Library**
+- 🛠️ **Ready-to-use Project Templates**
+- 🎨 **Modern UI/UX with Smooth Animations**
+- 🔍 **Advanced Search & Filter**
+- ❤️ **Personal Collections**
+- 🌐 **Open for Community Contributions**
+- 🖥️ **Mobile-first Design**
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Tech Stack & Tools  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| 🛠️ Category       | ⚙️ Tools Used |
+|:------------------|:--------------------------------|
+| **Frontend** | <img src="https://img.icons8.com/ultraviolet/40/react--v1.png" width="32"/> **React JS** <br> <img src="https://static-00.iconduck.com/assets.00/ant-design-icon-2048x2046-dl3neb73.png" width="32"/> **Ant Design** |
+| **Backend / Database** | <img src="https://img.icons8.com/color/48/supabase.png" width="32"/> **Supabase** |
+| **AI Integration** | <img src="https://brandlogo.org/wp-content/uploads/2024/06/Gemini-Icon-300x300.png.webp" width="32"/> **Google Gemini API** |
+| **Animations** | <img src="https://cdn.iconscout.com/icon/free/png-256/free-lottiefiles-logo-icon-download-in-svg-png-gif-file-formats--lottifiles-brand-iconscout-pack-logos-icons-4674917.png" width="32"/> **Lottie React** |
+| **Design & Prototyping** | <img src="https://img.icons8.com/color/48/figma--v1.png" width="32"/> **Figma** |
+| **Version Control** | <img src="https://img.icons8.com/material-outlined/40/github.png" width="32"/> **GitHub** |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+##  🧰 Installation  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Get a free API Key at [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Login your Supabase account and copy the supabase-project URL and anon-key [https://supabase.com/dashboard/sign-in?returnTo=%2Fprojects](https://supabase.com/dashboard/sign-in?returnTo=%2Fprojects).
 
-## Learn More
+2. Clone this repository:  
+   ```bash
+   git clone https://github.com/Souhaib-789/code_basket.git
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Make a `env.local` file and enter your REACT_APP_GEMINI_API_KEY , REACT_APP_SUPABSE_URL , REACT_APP_SUPABSE_API_KEY (Supabase anon Key) in it.
+```bash
+REACT_APP_GEMINI_API_KEY='ENTER_YOUR_API_KEY'
+REACT_APP_SUPABASE_URL='ENTER_YOUR_SUPABASE_PROJECT_URL'
+REACT_APP_SUPABASE_API_KEY='ENTER_YOUR_SUPABASE_ANON_KEY'
+```
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+4. Install NPM packages
+   ```sh
+   npm install or yarn install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+5. Run the project
+   ```sh
+   npm start
+   ```
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+<!-- CONTRIBUTING -->
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-### Deployment
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- CONTACT -->
+## Contact
+
+Muhammad Souhaib - [@Souhaib](https://www.instagram.com/souhaib.dev/?igsh=MWtsNmE4dTFodnR5Yw%3D%3D) - souhaibsouhaib838@gmail.com
+
+Project Link: [https://github.com/Souhaib-789/code_basket.git](https://github.com/Souhaib-789/code_basket.git)
