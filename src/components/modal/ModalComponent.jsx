@@ -47,6 +47,8 @@ const ModalComponent = ({
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          backgroundColor: 'var(--card-bg)'
+
         }}
       >
         {icon && 

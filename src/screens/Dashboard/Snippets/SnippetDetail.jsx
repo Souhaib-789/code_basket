@@ -21,6 +21,8 @@ const SnippetDetail = () => {
 
     const DATA = useSelector(state => state.SnippetReducer?.snippetDetails)
     const USER = useSelector(state => state.AuthReducer?.user);
+    const darkTheme = useSelector(state => state.GeneralReducer?.darkTheme);
+
 
     const [loading, setLoading] = useState(true);
 
@@ -59,7 +61,7 @@ const SnippetDetail = () => {
         <div className={styles.detail_page_container}>
             <div className={styles.row}>
                 <div className={styles.backIcon} onClick={() => window.history.back()}>
-                    <IoChevronBack />
+                    <IoChevronBack color={darkTheme ? 'white' : 'black'} />
                 </div>
 
 

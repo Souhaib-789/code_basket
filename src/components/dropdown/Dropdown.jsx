@@ -41,11 +41,12 @@ const Dropdown = (props) => {
           placeholder={props?.placeholder ? props?.placeholder : null}
           open={isOpen}
           suffixIcon={null}
-          style={{ fontFamily: 'var(--font-family)', fontSize: 'var(--mobile-heading)' }}
+          style={{ fontFamily: 'var(--font-family)', fontSize: 'var(--mobile-heading)',  }}
           dropdownStyle={{
             fontFamily: 'var(--font-family)'  ,
-            // backgroundColor: "var(--secondary-color)",
+            backgroundColor: "var(--card-bg)",
           }}
+          
           className={`${styles.inner_input} ${props?.inputClass}`}
           // defaultValue={"Select role"}
           onChange={handleChange} // Use the new handleChange function
@@ -58,15 +59,15 @@ const Dropdown = (props) => {
                 style={{
                   color:
                     selectedValue == option?.value
-                      ? "var(--black-color)"
-                      : "var(--grey-color)",
+                      ? "var(--secondary-color)"
+                      : "var(--light-grey)",
                 }}
                 text={option?.value}
               />
               <TextComponent
               style={{
                 color
-                    : "var(--grey-color)", fontSize: '9px'
+                    : "var(--light-grey)", fontSize: '9px'
               }}
               text={option?.span}
             />

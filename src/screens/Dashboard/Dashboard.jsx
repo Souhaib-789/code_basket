@@ -94,6 +94,7 @@ const Dashboard = () => {
             onChange={onApplyFilter}
             className={styles.dropdown}
             inputClass={styles.inputClass}
+            // color="var(--secondary-color)"
           />
         </div>
 
@@ -102,6 +103,7 @@ const Dashboard = () => {
           style={{ fontFamily: 'var(--font-family)' }}
           defaultActiveKey="1"
           items={TYPES}
+          
           onChange={(key) => {
             setActiveKey(key);
             fetchSnippets(key)

@@ -49,6 +49,67 @@
   object-fit: cover;
   align-self: center;
 }
+
+
+.google_btn{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  margin-top: 50px;
+  width: 80%;
+  height: 40px;
+  background-color: var(--white-color);
+  border-radius: 5px;
+  border: 1px solid var(--light-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.google_logo{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+.google_btn_text{
+  font-size: var(--mobile-heading);
+  color: var(--black-color);
+  /* font-weight: bold; */
+}
+.google_btn_text:hover{
+  color: var(--dark-text);
+}
+.google_btn:hover{
+  box-shadow: inset 0px 0px 30px -10px var(--input-border),
+    inset 0px 0px 0px -0px var(--input-border);
+  background-color: var(--white-color);
+  cursor: pointer;
+}
+
+.orDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+}
+.orText {
+  font-size: var(--mobile-heading);
+  color: var(--light-text);
+  font-weight: bold;
+  margin: 0px 10px;
+}
+
+.line{
+  width: 70%;
+  height: 1px;
+  background-color: var(--input-border);
+}
+
+
+
+
 .textDiv {
   display: flex;
   flex-direction: column;
@@ -64,7 +125,7 @@
   text-align: center;
 }
 .inputDiv {
-  margin: 20px 0;
+  margin: 10px 0;
   width: 100%;
   display: flex;
   flex-direction: column;

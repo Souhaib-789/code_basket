@@ -40,6 +40,16 @@ function Login() {
 
   }
 
+  const loginWithGoogle = () => {
+    // dispatch(AuthMiddleware.loginWithGoogle())
+    //   .then((res) => {
+    //     console.log(res)
+    //   })
+    //   .catch((err) => {
+    //     console.log(err)
+    //   })
+  }
+
 
   return (
     <div className={styles.mainCont}>
@@ -56,6 +66,18 @@ function Login() {
                 text={"Login to enjoy the code world experience."}
               />
             </div>
+
+            {/* <div className={styles.google_btn} onClick={loginWithGoogle}>
+              <img src={require('../../../assets/images/google.png')} className={styles.google_logo} />
+              <TextComponent text={"Continue with Google"} className={styles.google_btn_text} />
+            </div>
+
+            <div className={styles.orDiv}>
+              <div className={styles.line}></div>
+              <TextComponent text={"OR"} className={styles.orText} />
+              <div className={styles.line}></div>
+            </div> */}
+
             <div className={styles.inputDiv}>
               <InputField
                 className={styles.input}

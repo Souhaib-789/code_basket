@@ -6,8 +6,13 @@
     width: 100%;
     display: flex;
     min-height: 100vh;
+
     /* justify-content: center;
     align-items: center; */
+}
+
+.site-layout{
+    background: aqua !important;
 }
 
 .contentBox{
@@ -15,6 +20,7 @@
     border-radius: 15px;
     max-height: 85vh;
     overflow: scroll;
+    
 }
 
 
@@ -25,5 +31,6 @@
         max-height: 100vh;
         overflow: scroll;
         padding-bottom: 20%;
+        
     }
 }

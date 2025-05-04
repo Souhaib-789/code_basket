@@ -46,6 +46,13 @@ const sessionExpired = (payload) => {
   };
 };
 
+const changeTheme = (payload) => {
+  return {
+    type: ActionTypes.CHANGE_THEME,
+    payload,
+  };
+};
+
 const priceFormat = (number) => {
   return number ? number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : "0";
 };
@@ -59,4 +66,5 @@ export {
   hideUploadingLoading,
   sessionExpired,
   priceFormat,
+  changeTheme
 };

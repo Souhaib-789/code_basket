@@ -9,6 +9,7 @@ import { PiLaptopDuotone, PiRankingThin, PiUserListLight } from "react-icons/pi"
 import { VscSparkle } from "react-icons/vsc";
 import { BsShieldLock } from "react-icons/bs";
 import { BiBasket } from "react-icons/bi";
+import { useSelector } from "react-redux";
 
 
 const AboutUs = () => {
@@ -88,6 +89,7 @@ const AboutUs = () => {
         },
     ];
 
+    const darkTheme = useSelector(state => state.GeneralReducer?.darkTheme);
 
 
     return (
@@ -182,13 +184,13 @@ const AboutUs = () => {
 
                 <SubmitButton
                     leftIcon={
-                        <FaGithub size={18} color="var(--white)" />
+                        <FaGithub size={18}  />
                     }
                     onClick={
                         () => {
                             window.open("https://github.com/Souhaib-789/code_basket", "_blank");
                         }
-                    } title={'Contribute on Github'} secondaryBtn btnClass={styles.contribute_button} />
+                    } title={'Contribute on Github'} secondaryBtn={darkTheme ? false : true} btnClass={styles.contribute_button} />
             </div>
         </div>
     );

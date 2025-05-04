@@ -73,7 +73,7 @@
 }
  .btnText{
   font-size: 14px;
-  color: var(--white-color);
+  color: white;
   font-family: var(--font-family);
   font-weight: 500;
 }

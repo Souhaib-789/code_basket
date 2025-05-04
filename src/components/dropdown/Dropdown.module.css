@@ -37,7 +37,6 @@
   display: flex;
   align-items: center;
   font-family: "Urbanist-regular";
-  
 } 
 .dropdownStyle{
   font-family: "Urbanist-regular";
@@ -128,6 +127,5 @@ input::-webkit-inner-spin-button {
     border: none;
     outline: none;
     font-size: 13px;
-    /* color: #fff; */
   }
 }

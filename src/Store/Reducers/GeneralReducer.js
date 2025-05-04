@@ -5,6 +5,7 @@ let initialState = {
   alertOptions: null,
   loading: false,
   uploadingLoading: false,
+  darkTheme: false,
 
   sessionExpired: false,
 };
@@ -38,6 +39,11 @@ const GeneralReducer = (state = initialState, action) => {
 
     case ActionTypes.HIDE_LOADING:
       state = { ...state, loading: false };
+      break;
+
+      
+    case ActionTypes.CHANGE_THEME:
+      state = { ...state, darkTheme: action.payload };
       break;
 
 

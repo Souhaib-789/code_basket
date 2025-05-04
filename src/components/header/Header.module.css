@@ -22,6 +22,8 @@
   display: block;
   font-size: 16px;
   font-family: var(--font-family);
+  color: var(--black-color);
+
   /* color: var(--secondary-color); */
   /* font-weight: bold; */
   /* margin-left: 5px; */
@@ -33,6 +35,7 @@
   font-family: var(--font-family);
   /* font-weight: bold; */
   text-transform: capitalize;
+  color: var(--black-color);
   /* color: var(--secondary-color); */
   /* font-weight: bold; */
   /* margin-left: 5px; */

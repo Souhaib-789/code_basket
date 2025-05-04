@@ -11,7 +11,7 @@
   }
   
   .modal_content {
-    background: #fff;
+    background: var(--white-color);
     width: 600px;
     height: 100%;
     position: relative;
@@ -29,6 +29,7 @@
     background: none;
     border: none;
     cursor: pointer;
+    color: var(--black-color);
   }
   
   @keyframes slideIn {

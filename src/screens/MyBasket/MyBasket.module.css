@@ -40,6 +40,7 @@
   .input{
     width: 100%;
     font-size: 14px;
+    ;
   }
 
   
@@ -78,6 +79,7 @@
     font-size: 25px;
     font-family: var(--font-family);
     font-weight: bold;
+    color: var(--black-color);
   }
 
 

@@ -12,9 +12,12 @@ const AlertComp = () => {
     if (!firstUpdate.current) {
       api.open({
         message: alert?.message ? alert?.message : "Network Error",
+        
         style: {
          fontFamily: "var(--font-family)",
+        //  backgroundColor: 'var(--card-bg)',
         },
+        
         duration: 2,
         type: alert?.type?.toLowerCase(),
         placement: "top",

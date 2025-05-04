@@ -37,6 +37,7 @@ const Profile = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [openImageViewingModal, setopenImageViewingModaleModal] = useState(false);
     const [loading, setLoading] = useState(true);
+    const darkTheme = useSelector(state => state.GeneralReducer?.darkTheme);
 
 
 
@@ -89,7 +90,7 @@ const Profile = () => {
     return (
         <div className={styles.container}>
             <div className={styles.backIcon} onClick={() => window.history.back()}>
-                <IoChevronBack />
+                <IoChevronBack color={darkTheme ? 'white' : 'black'} />
             </div>
             <div className={styles.gradient_bar}>
 
@@ -103,7 +104,7 @@ const Profile = () => {
                         <div className={styles.profileDetails}>
                             <TextComponent text={name || 'Your name'} className={name ? styles.name : styles.namex} />
                             <TextComponent text={bio || 'Your bio'} className={bio ? styles.bio : styles.biox} />
-                            <SubmitButton title={screenType == 'detail' ? 'Get in touch' : 'Edit Profile'} secondaryBtn textClass={styles.btn_text} btnClass={styles.top_button}
+                            <SubmitButton title={screenType == 'detail' ? 'Get in touch' : 'Edit Profile'} secondaryBtn={darkTheme ? false : true} textClass={styles.btn_text} btnClass={styles.top_button}
                                 onClick={screenType == 'detail' ? () => {
                                     window.open(`mailto:${email}`, '_blank');
                                 } : () => {

@@ -1,4 +1,4 @@
-import { hideLoading, sessionExpired, showAlert, showLoading } from "../Actions/GeneralActions";
+import { changeTheme, hideLoading, sessionExpired, showAlert, showLoading } from "../Actions/GeneralActions";
 import { getUser, isLogin, onUpdateProfile } from "../Actions/AuthAction";
 import supabase from "../../config/supabase-client";
 
@@ -188,6 +188,7 @@ export const AuthMiddleware = {
           dispatch(getUser(null));
           dispatch(isLogin(false));
           dispatch(sessionExpired(false));
+          dispatch(changeTheme(false))
           resolve(true);
 
         } catch (error) {

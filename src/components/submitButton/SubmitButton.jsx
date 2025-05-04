@@ -28,7 +28,7 @@ const SubmitButton = (props) => {
       onClick={props?.onClick}
       style={props?.style}
     >
-      {props.leftIcon && <div style={{display: "flex", alignItems:"center", marginRight: "5px"}}>{props.leftIcon}</div>}
+      {props.leftIcon && <div style={{display: "flex", alignItems:"center", marginRight: "10px"}}>{props.leftIcon}</div>}
       <TextComponent
         className={`${props?.textClass} ${
           props.secondaryBtn ? styles.seconbtnText : styles.btnText

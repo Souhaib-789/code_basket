@@ -252,6 +252,25 @@
   padding: 10px 20px !important;
   margin-left: 10px !important;
 }
+
+.theme_view {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  margin: auto;
+  width: 90%;
+  margin-right: 5px;
+  height: 100%;
+  /* background-color: antiquewhite; */
+}
+
+.theme_text{
+  color: var(--black-color) !important;
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 500;
+}
  
 
 

@@ -28,6 +28,7 @@ export const ProtectedLayout = () => {
   }
   return (
     <Layout
+    
       // hasSider
       style={{
         position: "fixed",
@@ -59,7 +60,7 @@ export const ProtectedLayout = () => {
         />
       </Sider>
 
-      <Layout className="site-layout">
+      <Layout className="site-layout" style={{backgroundColor: "var(--bg-color)"}}>
         <CompHeader
           onBackClick={() => setCollapsed(!collapsed)}
           collapsed={collapsed}

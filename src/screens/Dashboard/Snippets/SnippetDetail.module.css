@@ -55,7 +55,7 @@
   width: 40px;
   height: 40px;
   margin-top: 20px;
-  background-color: var(--white-color);
+  background-color: var(--card-bg);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
@@ -63,6 +63,7 @@
   font-size: 30px;
   font-family: var(--font-family);
   font-weight: bold;
+  color: var(--black-color);
 }
 
 .snippet_meta {
@@ -85,7 +86,7 @@
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 30px;
-  color: #555;
+  color: var(--light-grey);
   font-family: var(--font-family);
 
 }
@@ -98,8 +99,8 @@
 
 .usage_title {
   font-size: 1.5rem;
+  color: var(--black-color);
   margin-bottom: 10px;
-  color: #333;
   font-family: var(--font-family);
 
 }
@@ -117,7 +118,7 @@
 .usage_description {
   font-size: 1rem;
   margin-bottom: 15px;
-  color: #555;
+  color: var(--light-grey);
   line-height: 1.5;
   font-family: var(--font-family);
 
@@ -130,7 +131,7 @@
   width: 30% !important;
   height: 40px;
   margin-top: 20px;
-  border-radius: 10
+  border-radius: 10;
 }
 
 .user_info_view{

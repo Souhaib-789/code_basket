@@ -3,7 +3,7 @@
     font-family: var(--font-family);
     font-size: 18px;
     font-weight: 400;
-    color: var(--black-color);
+    color:  #000;
 }
 
 @media only screen and (max-width: 576px) {

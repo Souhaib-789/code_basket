@@ -21,14 +21,17 @@
   font-size: 25px;
   font-family: var(--font-family);
   font-weight: bold;
+  color: var(--black-color);
 }
 
 .dropdown{
   width: 30%;
 }
 
+
 .inputClass{
   font-size: 12px;
+
 }
 
 .wide_row{
