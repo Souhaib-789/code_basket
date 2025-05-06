@@ -12,7 +12,7 @@
 .heading_row{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .card:hover {
@@ -44,6 +44,7 @@
     font-weight: 600;
     color: var(--black-color);
     margin-bottom: 4px;
+    width: 70%;
 }
 
 .row {

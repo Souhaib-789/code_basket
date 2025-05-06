@@ -346,6 +346,23 @@
     border-top: 1px solid #eee;
 }
 
+.footerLinks{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.footerLink{
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footerLinkText{
+    color: var(--secondary-color);
+    font-weight: 600;
+}
 @media (max-width: 768px) {
    
     .heroTitle {

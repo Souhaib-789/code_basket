@@ -11,6 +11,7 @@ import MyBasket from "../screens/MyBasket/MyBasket";
 import About from "../screens/About/About";
 import Feedback from "../screens/Feedback/Feedback";
 import LandingPage from "../screens/LandingPage/LandingPage";
+import PrivacyPolicy from "../screens/PrivacyPolicy/PrivacyPolicy";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,8 @@ export const router = createBrowserRouter(
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+
       </Route>
 
       <Route element={<ProtectedLayout />}>

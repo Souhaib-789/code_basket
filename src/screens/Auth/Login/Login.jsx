@@ -8,6 +8,7 @@ import { LuEye, LuEyeOff } from "react-icons/lu";
 import { useNavigate } from "react-router-dom";
 import { AuthMiddleware } from "../../../Store/Middlewares/AuthMiddleware";
 import { showAlert } from "../../../Store/Actions/GeneralActions";
+import supabase from "../../../config/supabase-client";
 
 function Login() {
 
@@ -32,22 +33,21 @@ function Login() {
       password: password
     }
     dispatch(AuthMiddleware.login(data))
-    .then((res) => {
-    })
-    .catch((err) => {
-      console.log(err)
-    })
+      .then((res) => {
+      })
+      .catch((err) => {
+        console.log(err)
+      })
 
   }
 
-  const loginWithGoogle = () => {
-    // dispatch(AuthMiddleware.loginWithGoogle())
-    //   .then((res) => {
-    //     console.log(res)
-    //   })
-    //   .catch((err) => {
-    //     console.log(err)
-    //   })
+  const onClickloginWithGoogle = () => {
+    dispatch(AuthMiddleware.loginWithGoogle())
+      .then((res) => {
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
 
 
@@ -60,14 +60,14 @@ function Login() {
         <div className={styles.subRightCont}>
           <div className={styles.rightWidthCont}>
             <div className={styles.textDiv}>
-             <img src={wordLogo} className={styles.short_logo} />
+              <img src={wordLogo} className={styles.short_logo} />
               <TextComponent
                 className={styles.welcomeText}
                 text={"Login to enjoy the code world experience."}
               />
             </div>
 
-            {/* <div className={styles.google_btn} onClick={loginWithGoogle}>
+            <div className={styles.google_btn} onClick={onClickloginWithGoogle}>
               <img src={require('../../../assets/images/google.png')} className={styles.google_logo} />
               <TextComponent text={"Continue with Google"} className={styles.google_btn_text} />
             </div>
@@ -76,7 +76,7 @@ function Login() {
               <div className={styles.line}></div>
               <TextComponent text={"OR"} className={styles.orText} />
               <div className={styles.line}></div>
-            </div> */}
+            </div>
 
             <div className={styles.inputDiv}>
               <InputField

@@ -26,7 +26,7 @@ const SnippetDetail = () => {
 
     const [loading, setLoading] = useState(true);
 
-
+console.log(DATA);
 
     useEffect(() => {
         fetchDetails()
@@ -142,8 +142,8 @@ const SnippetDetail = () => {
 
                                     <div className={styles.usage_section}>
                                         <h2 className={styles.usage_title}>Usage Example,</h2>
-                                        <p className={styles.usage_description}><b>Input : </b>{DATA?.usage_example?.input}</p>
-                                        <p className={styles.usage_description}><b>Expected Output : </b>{DATA?.usage_example?.expected_output}</p>
+                                        <p className={styles.usage_description}><b>Input : </b>{DATA?.usage_example?.input.toString()}</p>
+                                        <p className={styles.usage_description}><b>Expected Output : </b>{DATA?.usage_example?.expected_output.toString()}</p>
 
                                         <div className={styles.code_block}>
 

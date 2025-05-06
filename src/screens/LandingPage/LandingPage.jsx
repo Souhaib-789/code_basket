@@ -221,7 +221,7 @@ const LandingPage = () => {
                         <TextComponent text="A snippet-saving platform that stores, organizes, and tags your code and makes reuse effortless. " />
                     </p>
                     <button className={styles.heroButton} onClick={() => navigate('/login')}>
-                        <TextComponent text="Get Started" />
+                        <TextComponent text="Get Started" style={{ color: '#fff' }} />
                     </button>
                 </div>
 
@@ -335,6 +335,12 @@ const LandingPage = () => {
 
             <footer className={styles.footer}>
                 <TextComponent text="© 2025 CodeBasket. All rights reserved." />
+                <div className={styles.footerLinks}>
+                    <a className={styles.footerLink} onClick={() => navigate('/privacypolicy')}>
+                        <TextComponent text="Privacy Policy" className={styles.footerLinkText} />
+                    </a>
+                </div>
+
             </footer>
         </div>
     );

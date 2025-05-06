@@ -45,7 +45,7 @@ const SnippetCard = ({ del, item, index }) => {
 
 
                         <div className={styles.row}>
-                            <TextComponent text={item?.language} className={styles.language_text} />
+                            <TextComponent text={item?.language} className={styles.language_text}  />
 
                             {
                                 del ?

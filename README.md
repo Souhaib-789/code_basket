@@ -15,12 +15,11 @@
 ## 📌 Features
 
 - 📚 **Code Snippet Library**
-- 🛠️ **Ready-to-use Project Templates**
+- 🛠️ **Ready-to-use Code Templates**
 - 🎨 **Modern UI/UX with Smooth Animations**
 - 🔍 **Advanced Search & Filter**
-- ❤️ **Personal Collections**
+- ❤️ **Personal Code Collections**
 - 🌐 **Open for Community Contributions**
-- 🖥️ **Mobile-first Design**
 
 ---
 

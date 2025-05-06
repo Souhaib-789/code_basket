@@ -47,6 +47,33 @@ export const AuthMiddleware = {
     };
   },
 
+  loginWithGoogle: params => {
+    return dispatch => {
+      dispatch(showLoading());
+      return new Promise(async (resolve, reject) => {
+        try {
+
+          const { data, error } = await supabase.auth.signInWithOAuth({
+            provider: 'google',
+          });
+
+          if (error) {
+            dispatch(showAlert({ title: 'login', message: error?.message ? error?.message : 'Something went wrong', type: 'Error' }));
+            reject(error);
+          }
+        
+        
+        } catch (error) {
+          reject(error);
+          dispatch(showAlert({ title: 'login', message: error?.message ? error?.message : 'Something went wrong!', type: 'Error' }));
+
+        } finally {
+          dispatch(hideLoading());
+        }
+      });
+    };
+  },
+
   signUp: params => {
     return dispatch => {
       dispatch(showLoading());
@@ -184,6 +211,7 @@ export const AuthMiddleware = {
       dispatch(showLoading());
       return new Promise(async (resolve, reject) => {
         try {
+          await supabase.auth.signOut();
           localStorage.clear();
           dispatch(getUser(null));
           dispatch(isLogin(false));
