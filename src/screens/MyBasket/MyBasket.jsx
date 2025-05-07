@@ -55,11 +55,11 @@ const MyBasket = () => {
             value: 'Algorithms & Data Structures',
             span: 'Sorting, searching, recursion, graph algorithms, and various data structure implementations'
         },
-        // {
-        //     id: 4,
-        //     value: 'Database Queries & ORM Code',
-        //     span: 'SQL queries, NoSQL queries, ORM methods.'
-        // },
+        {
+            id: 4,
+            value: 'Error Handling & Logging',
+            span: 'Exception management, error handling routines, logging utilities'
+        },
         // {
         //     id: 5,
         //     value: 'Utility Functions & Helpers',
@@ -75,27 +75,23 @@ const MyBasket = () => {
         //     value: 'Testing & Debugging Code',
         //     span: 'Unit tests, integration tests, debugging code snippets, etc'
         // },
+      
         // {
         //     id: 8,
-        //     value: 'Error Handling & Logging',
-        //     span: 'Exception management, error handling routines, logging utilities'
-        // },
-        // {
-        //     id: 9,
         //     value: 'Security & Authentication',
         //     span: 'Code snippets for authentication, authorization, encryption, and security protocols'
         // },
         // {
-        //     id: 10,
+        //     id: 9,
         //     value: 'Performance Optimization',
         //     span: 'Code snippets for performance optimization, caching, lazy loading, etc'
         // },
         // {
-        //     id: 11,
+        //     id: 10,
         //     value: 'Deployment & CI/CD',
         //     span: 'Deployment scripts, CI/CD pipelines, Docker configurations, etc'
         // }, {
-        //     id: 12,
+        //     id: 11,
         //     value: 'Boilerplate & Starter Code',
         //     span: 'Templates or common patterns that kickstart new projects or modules'
         // }

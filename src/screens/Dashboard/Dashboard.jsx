@@ -9,6 +9,7 @@ import { SnippetsMiddleware } from "../../Store/Middlewares/SnippetsMiddleware";
 import { clearSnippetsList } from "../../Store/Actions/SnippetActions";
 import APICallsIntegration from "./Snippets/APICallsIntegration";
 import DSA from "./Snippets/DSA";
+import ErrorHandling from "./Snippets/ErrorHandling";
 
 const Dashboard = () => {
 
@@ -35,15 +36,14 @@ const Dashboard = () => {
       1: 'UI / Frontend Component',
       2: 'API Calls & Integrations',
       3: 'Algorithms & Data Structures',
-      4: 'Database Queries & ORM Code',
+      4: 'Error Handling & Logging',
       5: 'Utility Functions & Helpers',
       6: 'Configuration & Setup Code',
       7: 'Testing & Debugging Code',
-      8: 'Error Handling & Logging',
-      9: 'Security & Authentication',
-      10: 'Performance Optimization',
-      11: 'Deployment & CI/CD',
-      12: 'Boilerplate & Starter Code'
+      8: 'Security & Authentication',
+      9: 'Performance Optimization',
+      10: 'Deployment & CI/CD',
+      11: 'Boilerplate & Starter Code'
     };
     const type = typeMap[e] || 'UI / Frontend Component';
     dispatch(SnippetsMiddleware.getCodeSnippets({ snippetType: type, language: lang ? lang : language }))
@@ -66,7 +66,8 @@ const Dashboard = () => {
   const TYPES = useMemo(() => [
     { key: 1, label: 'UI / Frontend Component', children: <UIComponents loading={loading} data={DATA} /> },
     { key: 2, label: 'API Calls & Integrations', children: <APICallsIntegration loading={loading} data={DATA} /> },
-    { key: 3, label: 'Algorithms & Data Structures', children: <DSA loading={loading} data={DATA} /> }
+    { key: 3, label: 'Algorithms & Data Structures', children: <DSA loading={loading} data={DATA} /> },
+    { key: 4, label: 'Error Handling & Logging', children: <ErrorHandling loading={loading} data={DATA} /> },
   ], [DATA]);
 
   const LANGUAGES = useMemo(() => [

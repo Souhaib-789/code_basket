@@ -22,7 +22,7 @@ function App() {
   //   const token = localStorage.getItem("@token");
   //   const user = JSON?.parse(userData);
   //   const storedTheme = localStorage.getItem('@theme');
-    
+
   //   console.log("theme", storedTheme);
   //   if (userData != null && token != null) {
   //     // console.log("sdfsdfsdfseadfasdf", islogin);
@@ -40,22 +40,31 @@ function App() {
     const userData = localStorage.getItem("@user");
     const token = localStorage.getItem("@token");
     const storedTheme = localStorage.getItem('@theme');
-  
+
     if (userData && token) {
       const user = JSON.parse(userData);
       dispatch(getUser(user));
       dispatch(isLogin(true));
       dispatch(changeTheme(storedTheme));
     } else {
-      // 👇 Handle the case when user just returned from Google login
       supabase.auth.getSession().then(async ({ data: { session } }) => {
         if (session) {
+          const avatar_url = session?.user?.user_metadata?.avatar_url;
+
+          await supabase
+            .from('profiles')
+            .update({
+              image: avatar_url,
+            })
+            .eq('id', session.user.id);
+
           const { data: profileData } = await supabase
             .from('profiles')
             .select()
             .eq('id', session.user.id)
             .single();
-  
+
+
           if (profileData) {
             localStorage.setItem("@user", JSON.stringify(profileData));
             localStorage.setItem("@token", session.access_token);
@@ -71,7 +80,7 @@ function App() {
       });
     }
   }, []);
-  
+
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', darkTheme);

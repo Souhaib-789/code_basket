@@ -148,6 +148,7 @@ body {
   box-shadow: none !important;
 }
 
+
 .ant-select .ant-select-selection-placeholder {
   color: var(--input-txt) !important;
   font-weight: var(--font-family) !important;
@@ -160,8 +161,14 @@ body {
   background-color: var(--white-color) !important;
 }
 .ant-select-item-option-selected {
-  background-color: var(--light-blue) !important; /* Light blue */
+  background-color: var(--light-secondary) !important; /* Light blue */
   color: var(--secondary-color) !important; /* Blue text */
+  font-weight: var(--font-family) !important;
+  /* font-size: var(--mobile-font); */
+}
+
+.ant-select-item-option text {
+  color: var(--black-color) !important; /* Blue text */
   font-weight: var(--font-family) !important;
   /* font-size: var(--mobile-font); */
 }
