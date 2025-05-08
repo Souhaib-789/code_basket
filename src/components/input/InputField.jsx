@@ -15,6 +15,14 @@ const InputField = (props) => {
         <TextComponent>{props?.label}</TextComponent>
       </text>
       <div className={styles.input} style={props.inputStyle}>
+
+          {props?.leftIcon ? (
+          <div className={styles.leftIcon} onClick={props?.onleftIconPress}>
+            {props?.leftIcon}
+          </div>
+        ) : null}
+
+        
         {props?.textArea ? (
           <textarea
           

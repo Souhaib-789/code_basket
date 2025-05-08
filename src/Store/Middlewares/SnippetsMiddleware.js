@@ -81,6 +81,10 @@ export const SnippetsMiddleware = {
 
 
                     if (params?.language) { query = query.eq('language', params?.language) }
+                    if (params?.search) {
+                        query = query.ilike('title', `%${params?.search}%`)
+                    }
+
 
                     const { data, error } = await query;
 

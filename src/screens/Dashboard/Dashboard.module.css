@@ -15,6 +15,13 @@
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
+.row{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 30%;
+}
+
 
 .heading{
   display: block;
@@ -25,8 +32,15 @@
 }
 
 .dropdown{
-  width: 30%;
+  width: 100%;
 }
+
+.search_icon{
+  margin-top: 8px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  background-color: var(--white-color);
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;}
 
 
 .inputClass{
@@ -37,10 +51,30 @@
 .wide_row{
   display: flex;
   justify-content: space-between;
-  margin: 20px 0px;
+  margin: 5px 0px;
   align-items: center;
 
 }
+
+.search{
+  width: 100% !important;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.inputClass{
+  font-size: 14px !important;
+ 
+}
+
+.search_container{
+  padding: 10px 20px;
+  width: 60%;
+  
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
+
 
 
 .saleCont {
@@ -188,6 +222,7 @@
   .container{
     padding: 10px 15px;
   }
+
 
   .wide_row{
     display: flex;
