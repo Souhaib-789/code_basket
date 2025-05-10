@@ -211,6 +211,37 @@ pre {
   white-space: pre-wrap;
 }
 
+.keywords_view{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 5px ;
+}
+
+.keyword_box{
+  background-color: var(--light-secondary);
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  color: var(--white-color);
+  /* font-weight: 500; */
+}
+
+.keyword_boxx{
+  background-color: rgba(90,79,207 , 0.7 );
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  color: var(--white-color);
+  /* font-weight: 500; */
+}
+
+.keywords{
+  font-size: 14px;
+  color: #ffff;
+}
+
 @media (max-width: 768px) {
   .detail_page_container {
     padding: 20px;

@@ -104,7 +104,6 @@ const SideMenu = ({ collapsed, onBackClick }) => {
   const menus = MenuList(navigation, logout);
 
   const [isDarkTheme, setIsDarkTheme] = useState(darkTheme);
-  console.log("darkTheme", isDarkTheme);
 
   useEffect(() => {
     const theme = localStorage.getItem("@theme") == "true" ? true : false;
@@ -131,19 +130,19 @@ const SideMenu = ({ collapsed, onBackClick }) => {
   return (
     <div className="menu-main-container">
       <div className="logo_container">
-        {collapsed ? (
+        {/* {collapsed ? (
           <img
             src={require("../../assets/images/sideLogo.png")}
             alt="logo"
             style={{ width: "50%", height: "50%" }}
           />
-        ) : (
+        ) : ( */}
           <img
-            src={require("../../assets/images/sideLogo.png")}
+            src={ darkTheme ? require("../../assets/images/sideLogox.png") : require("../../assets/images/sideLogo.png") }
             alt="logo"
             style={{ width: "70%", height: "70%" }}
           />
-        )}
+        {/* )} */}
       </div>
       <Menu
         _internalDisableMenuItemTitleTooltip
@@ -155,8 +154,10 @@ const SideMenu = ({ collapsed, onBackClick }) => {
       />
 
       <div className="theme_view">
-        <CiDark className="sidebarIcon" />
-        <h4 className="theme_text">Dark Mode</h4>
+        <CiDark className='darkmode_icon sidebarIcon' />
+         <h4 className="theme_text">Dark Mode</h4>
+      
+        
         <Switch  checked={isDarkTheme} onChange={onChange} style={{backgroundColor: isDarkTheme ?  'var(--secondary-color)' : 'var(--border-color)'}} />
       </div>
 

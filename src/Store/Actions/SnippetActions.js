@@ -47,6 +47,20 @@ const deleteSnippet = payload => {
     };
 }
 
+const getSearchedValue = payload => {
+    return {
+        type: ActionTypes.GET_SEARCHED_VALUE,
+        payload: payload,
+    };
+}
 
-export {deleteSnippet,  getSnippetsList, clearSnippetsList, getSnippetDetail, clearSnippetDetail, getMySnippets, clearMySnippets };
+const clearSearchedValue = () => {
+    return {
+        type: ActionTypes.CLEAR_SEARCHED_VALUE,
+        
+    };
+}
+
+
+export {clearSearchedValue, getSearchedValue, deleteSnippet,  getSnippetsList, clearSnippetsList, getSnippetDetail, clearSnippetDetail, getMySnippets, clearMySnippets };
 

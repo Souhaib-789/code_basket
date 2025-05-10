@@ -242,6 +242,17 @@
   margin: 5px 0px;
 }
 
+.row{
+  width: 100% !important;
+  margin: 5px 0px;
+}
+
+.search_container{
+  width: 100%;
+  padding: 10px 0px;
+}
+
+
 }
 
 @media only screen and (max-width: 540px) {
@@ -259,7 +270,9 @@
 
 
 
+
   .dropdown{
     width: 90%;
   }
+
 }

@@ -1,7 +1,7 @@
 import supabase from "../../config/supabase-client";
 import { hideLoading, hideUploadingLoading, showAlert, showLoading, showUploadingLoading } from "../Actions/GeneralActions";
 import { chatSession } from "../../config/aiModel";
-import { deleteSnippet, getMySnippets, getSnippetDetail, getSnippetsList } from "../Actions/SnippetActions";
+import { clearSearchedValue, deleteSnippet, getMySnippets, getSearchedValue, getSnippetDetail, getSnippetsList } from "../Actions/SnippetActions";
 
 
 export const SnippetsMiddleware = {
@@ -12,8 +12,8 @@ export const SnippetsMiddleware = {
                 dispatch(showUploadingLoading());
                 try {
 
-                    const promptWithoutDescription = `Analyze the following code snippet and provide a JSON object with the following keys:\n\n- \"language\": Identify the programming language and, if applicable, the framework used in the code snippet.\n- \"usage_example\": Provide a practical usage example that shows how to use the code, including sample input (only in text description from) and expected output (only in text description from) if applicable.\n\nHere is the code snippet:${params?.snippet} \n\nMake sure your output  is a valid JSON object.\n`
-                    const prompt = `Analyze the following code snippet and provide a JSON object with the following keys:\n\n- \"description\": Write a concise explanation of what the code does and its overall purpose.\n- \"language\": Identify the programming language and, if applicable, the framework used in the code snippet.\n- \"usage_example\": Provide a practical usage example that shows how to use the code, including sample input (only in text description from) and expected output (only in text description from) if applicable.\n\nHere is the code snippet:${params?.snippet} \n\nMake sure your output is a valid JSON object.\n`
+                    const promptWithoutDescription = `Analyze the following code snippet and provide a JSON object with the following keys:\n\n- \"language\": Identify the programming language and, if applicable, the framework used in the code snippet  and array of 2 keywords related to that snippet.\n- \"usage_example\": Provide a practical usage example that shows how to use the code, including sample input (only in text description from) and expected output (only in text description from) if applicable.\n\nHere is the code snippet:${params?.snippet} \n\nMake sure your output  is a valid JSON object.\n`
+                    const prompt = `Analyze the following code snippet and provide a JSON object with the following keys:\n\n- \"description\": Write a concise explanation of what the code does and its overall purpose.\n- \"language\": Identify the programming language and, if applicable, the framework used in the code snippet and array of 2 keywords related to that snippet.\n- \"usage_example\": Provide a practical usage example that shows how to use the code, including sample input (only in text description from) and expected output (only in text description from) if applicable.\n\nHere is the code snippet:${params?.snippet} \n\nMake sure your output is a valid JSON object.\n`
 
                     const response = await chatSession.sendMessage(
                         params?.description ? promptWithoutDescription : prompt
@@ -39,6 +39,7 @@ export const SnippetsMiddleware = {
                         language: formattedResult?.language,
                         framework: formattedResult?.framework,
                         usage_example: formattedResult?.usage_example,
+                        keywords: formattedResult?.keywords,
                         snippet: params?.snippet,
                         thumbnail: params?.thumbnail,
                         created_by: params?.created_by
@@ -76,7 +77,7 @@ export const SnippetsMiddleware = {
 
                     let query = supabase
                         .from('snippets')
-                        .select('id, title, description, language, created_by')
+                        .select('id, title, description, language, keywords, created_by')
                         .eq('type', params?.snippetType)
 
 
@@ -88,9 +89,6 @@ export const SnippetsMiddleware = {
 
                     const { data, error } = await query;
 
-
-                    console.log('data', params);
-
                     if (error) {
                         dispatch(showAlert({ title: 'Upload Snippet', message: error?.message ? error?.message : 'Something went wrong!', type: 'Error' }));
                         reject(error)
@@ -98,6 +96,12 @@ export const SnippetsMiddleware = {
                     else {
                         resolve(true)
                         dispatch(getSnippetsList(data))
+                        if(params?.search){
+                            dispatch(getSearchedValue(params?.search))
+                        }
+                        else{
+                            dispatch(clearSearchedValue())
+                        }
                     }
 
                 } catch (error) {

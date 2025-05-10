@@ -306,6 +306,17 @@
     margin-left: 0px !important;
   }
 
+  .theme_text{
+    display: none;
+  }
+
+  .darkmode_icon {
+    display: none;
+  }
+
+  .theme_view{
+  margin: 10px 0px 0px 10px;
+ }
 
 
 

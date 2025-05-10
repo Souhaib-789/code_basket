@@ -26,7 +26,6 @@ const SnippetDetail = () => {
 
     const [loading, setLoading] = useState(true);
 
-console.log(DATA);
 
     useEffect(() => {
         fetchDetails()
@@ -98,6 +97,24 @@ console.log(DATA);
                                             <span className={styles.snippet_tag}>{DATA?.framework}</span>
                                     }
                                 </div>
+
+                                {
+                                    DATA?.keywords?.length > 0 ?
+                                        <div className={styles.keywords_view}>
+                                            {
+                                                DATA?.keywords?.map((item, index) => {
+                                                    return (
+                                                        <div className={darkTheme ? styles.keyword_box : styles.keyword_boxx} key={index}>
+                                                            <TextComponent text={'#' + item.split(' ').join('')} className={styles.keywords} />
+                                                        </div>
+                                                    )
+                                                })
+                                            }
+
+                                        </div>
+                                        : null
+                                }
+
 
                                 <TextComponent text={DATA?.type} style={{ color: "var(--secondary-color)" }} />
                                 <div className={styles.user_info_view}>

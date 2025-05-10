@@ -44,7 +44,7 @@
     font-weight: 600;
     color: var(--black-color);
     margin-bottom: 4px;
-    width: 70%;
+    width: 65%;
 }
 
 .row {
@@ -176,6 +176,37 @@
     margin-left: 10px !important;
   }
 
+  .keywords_view{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 5px ;
+  }
+
+  .keyword_box{
+    background-color: var(--light-secondary);
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: var(--white-color);
+    /* font-weight: 500; */
+  }
+
+  .keyword_boxx{
+    background-color: rgba(90,79,207 , 0.7 );
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: var(--white-color);
+    /* font-weight: 500; */
+  }
+
+  .keywords{
+    font-size: 11px;
+    color: #ffff;
+  }
+
 @media only screen and (max-width: 768px) {
     .card {
         padding: 14px;
@@ -219,7 +250,7 @@
     }
 
     .language_text{
-        display: none;
+        /* display: none; */
     }
 
     .modal_btn_container {
@@ -246,4 +277,35 @@
         width: 100%;
         margin-left: 0px !important;
     }
+
+    .keyword_box{
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+    .keyword_boxx{
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+   
+    .statusCont {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .prodName {
+        font-size: 16px;
+        width: 100%;
+    }
+    .text {
+        font-size: 12px;
+    }
+
+    .row{
+
+        margin: auto;
+    }
+
+  
+
+  
 }

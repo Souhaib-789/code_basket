@@ -4,7 +4,8 @@ let initialState = {
   Snippets: [],
   mySnippets: [],
 
-  snippetDetails: {}
+  snippetDetails: {},
+  searchedValue: null,
 };
 
 const SnippetReducer = (state = initialState, action) => {
@@ -40,6 +41,13 @@ const SnippetReducer = (state = initialState, action) => {
       state = { ...state, snippetDetails: {} };
       break;
 
+    case ActionTypes.GET_SEARCHED_VALUE:
+      state = { ...state, searchedValue: action.payload };
+      break;
+
+    case ActionTypes.CLEAR_SEARCHED_VALUE:
+      state = { ...state, searchedValue: null };
+      break;
 
 
     default:

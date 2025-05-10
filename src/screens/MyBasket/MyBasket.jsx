@@ -37,7 +37,13 @@ const MyBasket = () => {
         dispatch(clearMySnippets())
         dispatch(SnippetsMiddleware.getMyCodeSnippets({ id: USER?.id }))
             .then((data) => { setLoading(false) })
-            .catch((error) => { setLoading(false) })
+            .catch((error) => {
+                setTitle(null);
+                setDescription(null);
+                setCodeSnippet(null);
+                setType(null);
+                
+                setLoading(false) })
     }
 
 
