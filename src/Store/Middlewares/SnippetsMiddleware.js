@@ -12,8 +12,8 @@ export const SnippetsMiddleware = {
                 dispatch(showUploadingLoading());
                 try {
 
-                    const promptWithoutDescription = `Analyze the following code snippet and provide a JSON object with the following keys:\n\n- \"language\": Identify the programming language and, if applicable, the framework used in the code snippet  and array of 2 keywords related to that snippet.\n- \"usage_example\": Provide a practical usage example that shows how to use the code, including sample input (only in text description from) and expected output (only in text description from) if applicable.\n\nHere is the code snippet:${params?.snippet} \n\nMake sure your output  is a valid JSON object.\n`
-                    const prompt = `Analyze the following code snippet and provide a JSON object with the following keys:\n\n- \"description\": Write a concise explanation of what the code does and its overall purpose.\n- \"language\": Identify the programming language and, if applicable, the framework used in the code snippet and array of 2 keywords related to that snippet.\n- \"usage_example\": Provide a practical usage example that shows how to use the code, including sample input (only in text description from) and expected output (only in text description from) if applicable.\n\nHere is the code snippet:${params?.snippet} \n\nMake sure your output is a valid JSON object.\n`
+                    const promptWithoutDescription = `Analyze the following code snippet and provide a JSON object with the following keys:\n\n- \"language\": Identify the programming language and, if applicable, the framework used in the code snippet and an array containing two keywords related to that snippet.\n- \"usage_example\": Provide a practical usage example that shows how to use the code, including sample input (only in text description from) and expected output (only in text description from) if applicable.\n\nHere is the code snippet:${params?.snippet} \n\nMake sure your output  is a valid JSON object.\n`
+                    const prompt = `Analyze the following code snippet and provide a JSON object with the following keys:\n\n- \"description\": Write a concise explanation of what the code does and its overall purpose.\n- \"language\": Identify the programming language and, if applicable, the framework used in the code snippet and an array containing two keywords related to that snippet.\n- \"usage_example\": Provide a practical usage example that shows how to use the code, including sample input (only in text description from) and expected output (only in text description from) if applicable.\n\nHere is the code snippet:${params?.snippet} \n\nMake sure your output is a valid JSON object.\n`
 
                     const response = await chatSession.sendMessage(
                         params?.description ? promptWithoutDescription : prompt
@@ -24,10 +24,10 @@ export const SnippetsMiddleware = {
                     let formattedResult;
                     try {
                         formattedResult = JSON.parse(cleanedResult);
-                        // console.log(formattedResult)
+                        console.log('generated datttttttaaa--->>>' , formattedResult)
                     } catch (parseError) {
-                        // console.error('Failed to parse JSON:', parseError);
-                        dispatch(showAlert({ title: 'Upload Snippet', message: 'Failed to parse JSON', type: 'Error' }));
+                        console.error('Failed to parse JSON:', parseError);
+                        dispatch(showAlert({ title: 'Upload Snippet', message: 'Unable to generate more info. for this code at the moment', type: 'Warning' }));
                     }
 
 
@@ -96,10 +96,10 @@ export const SnippetsMiddleware = {
                     else {
                         resolve(true)
                         dispatch(getSnippetsList(data))
-                        if(params?.search){
+                        if (params?.search) {
                             dispatch(getSearchedValue(params?.search))
                         }
-                        else{
+                        else {
                             dispatch(clearSearchedValue())
                         }
                     }
@@ -174,7 +174,7 @@ export const SnippetsMiddleware = {
         };
     },
 
-    
+
     deleteCodeSnippet: params => {
         return dispatch => {
             return new Promise(async (resolve, reject) => {

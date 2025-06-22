@@ -26,6 +26,7 @@ const SnippetDetail = () => {
 
     const [loading, setLoading] = useState(true);
 
+console.log(DATA);
 
     useEffect(() => {
         fetchDetails()
