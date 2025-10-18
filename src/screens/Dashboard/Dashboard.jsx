@@ -106,7 +106,6 @@ const Dashboard = () => {
 
           {
             expand ?
-
               <AnimatePresence>
                 <motion.div
                   className={styles.search_container}
@@ -127,6 +126,8 @@ const Dashboard = () => {
                   />
                 </motion.div>
               </AnimatePresence>
+
+            
 
               :
 

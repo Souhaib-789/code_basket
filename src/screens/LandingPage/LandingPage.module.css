@@ -21,7 +21,7 @@
 .logo {
     width: 13rem;
     height: 50px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .navRight {

@@ -138,7 +138,7 @@ const SideMenu = ({ collapsed, onBackClick }) => {
           />
         ) : ( */}
           <img
-            src={ darkTheme ? require("../../assets/images/sideLogox.png") : require("../../assets/images/sideLogo.png") }
+            src={ require("../../assets/images/sideLogo.png") }
             alt="logo"
             style={{ width: "70%", height: "70%" }}
           />
