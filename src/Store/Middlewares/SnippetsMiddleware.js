@@ -61,7 +61,7 @@ export const SnippetsMiddleware = {
 
                 } catch (error) {
                     reject(error);
-                    dispatch(showAlert({ title: 'uploadCodeSnippet', message: error?.message ? error?.message : 'Something went wrong!', type: 'Error' }));
+                    dispatch(showAlert({ title: 'uploadCodeSnippet', message: 'Something went wrong we are fixing it!', type: 'Error' }));
 
                 } finally {
                     dispatch(hideUploadingLoading());

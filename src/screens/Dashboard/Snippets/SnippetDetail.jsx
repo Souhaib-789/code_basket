@@ -100,7 +100,7 @@ console.log(DATA);
                                 </div>
 
                                 {
-                                    DATA?.keywords?.length > 0 ?
+                                   Array.isArray(DATA?.keywords) &&  (DATA?.keywords?.length > 0 &&
                                         <div className={styles.keywords_view}>
                                             {
                                                 DATA?.keywords?.map((item, index) => {
@@ -113,7 +113,7 @@ console.log(DATA);
                                             }
 
                                         </div>
-                                        : null
+                                   )
                                 }
 
 

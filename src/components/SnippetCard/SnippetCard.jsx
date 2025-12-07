@@ -37,8 +37,7 @@ const SnippetCard = ({ del, item, index }) => {
             )
     }
 
-    const filteredItem = item?.title?.toLowerCase()?.includes(searchedVal?.toLowerCase()) 
-
+    const filteredItem = item?.title?.toLowerCase()?.includes(searchedVal?.toLowerCase())
     return (
         <div className={styles.card}>
             <div className={styles.card_sub_view}>
@@ -46,7 +45,7 @@ const SnippetCard = ({ del, item, index }) => {
                 <img src={require('../../assets/images/snippet.png')} alt="" className={styles.card_image} />
                 <div className={styles.card_mini_view}>
                     <div className={styles.heading_row} >
-                        <TextComponent text={item?.title} style={{backgroundColor: filteredItem ? 'yellow' :null }} className={styles.prodName} />
+                        <TextComponent text={item?.title} style={{ backgroundColor: filteredItem ? 'yellow' : null }} className={styles.prodName} />
 
                         <div className={styles.row}>
                             <TextComponent text={item?.language} className={styles.language_text} />
@@ -66,7 +65,7 @@ const SnippetCard = ({ del, item, index }) => {
                         </div>
                     </div>
                     {
-                        item?.keywords?.length > 0 ?
+                        Array.isArray(item?.keywords) &&  (item?.keywords?.length > 0 &&
                             <div className={styles.keywords_view}>
                                 {
                                     item?.keywords?.map((item, index) => {
@@ -78,8 +77,7 @@ const SnippetCard = ({ del, item, index }) => {
                                     })
                                 }
 
-                            </div>
-                            : null
+                            </div>) 
                     }
 
 
